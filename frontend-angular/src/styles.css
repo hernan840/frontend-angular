@@ -50,76 +50,7 @@ body{
 
 
 
-/*-------------------seccion sobre mi -------------------*/
 
-.sobre_mi{
-    /* background: linear-gradient(to top, rgba(30,35,38,.1), rgba(30,35,38,1)),
-    url(/img/fondo_barra.png);  */
-    /* background-size: cover; */
-    height: 100vh;
-    color: rgb(243, 231, 231);
-    display: flex;
-    align-items: center;
-}
-.sobre_mi .contenido-sobremi{
-    padding: 20px;
-    /* background-color: #0c1215; */
-    /* max-width: 80rem; */
-    width: 90%;
-    height: 80%;
-    margin: auto;
-    text-align: center;
-    border-radius: 40px;
-    background: rgba(74, 70, 70, 0.447);  /* transparente blureado */
-    backdrop-filter: blur(10px);
-    box-shadow: 20px 0 33px rgba(127, 119, 119, 0.5);
-
-    overflow: auto;                /*ocultar barra scrol*/
-    scrollbar-width: none;
-    
-    /* display: flex; */
-    z-index: 100;
-
-}
-.sobre_mi .contenido-sobremi::-webkit-scrollbar{
-    width: 0;
-}
-
-
-.sobre_mi .contenido-sobremi img{
-    margin-top: 25rem;
-    border: 5px solid #924a2d;
-    display: block;
-    /* margin: auto; */
-    border-radius: 50%;
-    display: flex;
-    align-items: flex-end;
-    /* top: 20rem;   */
-    float: right;
-    width: 25%;
-    /* height: 25%; */
-}
-.sobre_mi .contenido-sobremi .contenedor-img{
-    margin-top: 40px;
-    font-size: 42px;
-    font-family: 'Righteous';
-    padding-right: 20px;
-}
-
-.sobre_mi .contenido-sobremi .descripcion h1{
-    margin-top: 40px;
-    font-size: 35px;
-    text-decoration: underline overline #FF3028;
-
-}
-
-.sobre_mi .contenido-sobremi .descripcion p{
-    margin-top: 40px;
-    margin-left: 8rem;
-    font-size: 20px;
-    text-align: left;
-
-}
 
 /*------------------- experiencias -------------------*/
 .experiencias{
