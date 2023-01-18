@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { PortadaComponent } from './componentes/portada/portada.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
+import { ExperienciasComponent } from './componentes/experiencias/experiencias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     PortadaComponent,
-    SobreMiComponent
+    SobreMiComponent,
+    ExperienciasComponent
   ],
   imports: [
     BrowserModule

@@ -32,3 +32,4 @@ ________________________________________________________________________________
 ## crear componente menu y acomodar su seccion de css
 ## crear componente portada y acomodar su seccion de css
 ## crear componente sobre mi y acomodar su seccion de css
+## crear componente experiencias y acomodar su seccion de css

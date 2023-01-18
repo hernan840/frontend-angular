@@ -1,0 +1,95 @@
+
+/*------------------- experiencias -------------------*/
+.experiencias{
+    height: 100vh;
+    color: rgb(243, 231, 231);
+    display: flex;
+    align-items: center;
+ }
+ .experiencias .contenido-experiencias{
+    padding: 20px;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    background: rgba(74, 70, 70, 0.447);  /* transparente blureado */
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 0 33px rgba(127, 119, 119, 0.5);
+ 
+    overflow: auto;                /*ocultar barra scrol*/
+    scrollbar-width: none;
+ }
+ .experiencias .contenido-experiencias::-webkit-scrollbar{
+    width: 0;
+ }
+ .experiencias .contenido-experiencias .contenedor-nomb-btnnuevo{
+     display: grid;
+     place-items: center;
+ }
+ .experiencias .contenido-experiencias h1{
+    font-size: 9rem;
+    text-decoration: underline overline #FF3028;
+ 
+ }
+ .experiencias .contenido-experiencias .box-container-experiencias{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+ }
+ 
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia{
+    width: 300rem;
+    height: 50rem;
+    margin:5rem 1rem;
+    padding-left: 9rem;
+    border-left: .9rem solid rgb(33, 15, 226);
+    border-right: .9rem solid rgb(33, 15, 226);
+    position: relative;
+ 
+    /* box-shadow: 8px 0px 15px  #2904cc; */
+ 
+    box-shadow: 5px 0 10px  #2b7ac9; /*sombra*/
+    border-radius: 10px;
+ 
+    overflow: auto;                /*ocultar barra scrol*/
+    scrollbar-width: none;
+    margin-left: 25rem;
+    z-index: 100;
+ }
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia::-webkit-scrollbar{
+     width: 0;
+  }
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia img{
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10rem;
+    padding-right: 8rem;
+    padding-left: 5rem;
+    padding-bottom: 20rem;
+    float: left;
+    max-width: 60rem;
+    max-height: 60rem;
+ }
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia span{
+    font-size: 7rem;
+    /* background:#222; */
+    color:#fff;
+    /* border-radius: 5rem; */
+    padding:.5rem 2.5rem;
+ }
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia h2{
+    font-size: 7rem;
+    color:#fff;
+    padding-top: 1.5rem;
+ }
+ 
+ .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia p{
+    font-size: 4rem;
+    color:#eee;
+    padding: 1rem 0;
+ }
+ 
