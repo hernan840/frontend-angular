@@ -35,3 +35,4 @@ ________________________________________________________________________________
 ## crear componente experiencias y acomodar su seccion de css
 ## crear componente educacion y acomodar su seccion de css
 ## crear componente habilidades y acomodar su seccion de css
+## crear componente proyectos y acomodar su seccion de css
