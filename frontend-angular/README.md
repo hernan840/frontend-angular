@@ -28,3 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ______________________________________________________________________________________________________________________
 ## instalar dependencia bootstrap con npm install bootstrap y copiar la de fontawesome
+
+## crar componente menu y acomodar su seccion css
