@@ -1,0 +1,103 @@
+
+/*------------------- educacion -------------------*/
+.educacion{
+    height: 100vh;
+   color: rgb(243, 231, 231);
+   display: flex;
+   align-items: center;
+}
+.educacion .contenido-educacion{
+   padding: 20px;
+   width: 90%;
+   height: 80%;
+   margin: auto;
+   text-align: center;
+   border-radius: 40px;
+   background: rgba(74, 70, 70, 0.447);  /* transparente blureado */
+   backdrop-filter: blur(10px);
+   box-shadow: 20px 0 33px rgba(127, 119, 119, 0.5);
+
+   overflow: auto;                /*ocultar barra scrol*/
+   scrollbar-width: none;
+}
+.educacion .contenido-educacion::-webkit-scrollbar{
+   width: 0;
+}
+.educacion .contenido-educacion .contenedor-nomb-btnnuevaedu{
+   display: grid;
+   place-items: center;
+}
+
+.educacion .contenido-educacion h1{
+   font-size: 9rem;
+   text-decoration: underline overline #FF3028;
+}
+.educacion .contenido-educacion .box-container-educacion{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding:1rem 0;
+   padding-left: 3rem;
+}
+.educacion .contenido-educacion .box-container-educacion .box{
+   width:150rem;
+   height: 80rem;
+   margin:5rem 1rem;
+   padding-left: 9rem;
+   border-left: .9rem solid rgb(33, 15, 226);
+   position: relative;
+   box-shadow: 8px 0px 15px  #2b7ac9;
+   border-radius: 10px;
+   overflow: auto;                /*ocultar barra scrol*/
+   scrollbar-width: none;
+}
+.educacion .contenido-educacion .box-container-educacion .box::-webkit-scrollbar{
+   width: 0;
+}
+.educacion .contenido-educacion .box-container-educacion .box img{
+   display: flex;
+   align-items: flex-end;
+   padding-top: 20rem;
+   padding-right: 5rem;
+   padding-left: 5rem;
+   padding-bottom: 20rem;
+   float: right;
+   width: 30%;
+   height: auto;
+}
+.educacion .contenido-educacion .box-container-educacion .box span{
+   font-size: 10rem;
+   /* background:#222; */
+   color:#fff;
+   /* border-radius: 5rem; */
+   padding:.5rem 2.5rem;
+}
+.educacion .contenido-educacion .box-container-educacion .box h3{
+   font-size: 7rem;
+   color:#fff;
+   padding-top: 1.5rem;
+}
+.educacion .contenido-educacion .box-container-educacion .box h2{
+   font-size: 5rem;
+   color:#fff;
+   padding-top: 1.5rem;
+}
+.educacion .contenido-educacion .box-container-educacion .box p{
+   font-size: 4rem;
+   color:#eee;
+   padding: 1rem 0;
+   padding-top: 9rem;
+}
+
+.educacion .contenido-educacion .box-container-educacion .box .fas{
+   position: absolute;
+   top:-1.5rem; left:-2.5rem;
+   height:10rem;
+   width: 10rem;
+   border-radius: 50%;
+   line-height: 9rem;
+   font-size: 5rem;
+   color:#fff;
+   background:rgb(33, 15, 226);
+}
