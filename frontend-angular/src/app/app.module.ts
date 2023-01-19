@@ -14,6 +14,7 @@ import { EditInfoPerfilMComponent } from './componentes/modals/menu/edit-info-pe
 import { InfoPortadaComponent } from './componentes/modals/portada/info-portada/info-portada.component';
 import { NuevaRedSocialComponent } from './componentes/modals/portada/nueva-red-social/nueva-red-social.component';
 import { EditarRedSocialComponent } from './componentes/modals/portada/editar-red-social/editar-red-social.component';
+import { EditarSobremiComponent } from './componentes/modals/sobremi/editar-sobremi/editar-sobremi.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EditarRedSocialComponent } from './componentes/modals/portada/editar-re
     EditInfoPerfilMComponent,
     InfoPortadaComponent,
     NuevaRedSocialComponent,
-    EditarRedSocialComponent
+    EditarRedSocialComponent,
+    EditarSobremiComponent
   ],
   imports: [
     BrowserModule

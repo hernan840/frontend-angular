@@ -1,0 +1,78 @@
+/* --------inicio modal sobre mi---------- */
+.btn{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 30rem;
+    font-size:10px;
+    margin-top: 3rem;
+}
+.contenedor-btn-edit-borrar-sobremi{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn-editar-sobremi {
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    margin-left: 40rem; 
+
+}
+.btn-borrar-sobremi{
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    margin-left: 40rem;
+}
+
+.contet-modal-sobremi{
+    margin-top: 50rem;
+    background-color: rgba(27, 21, 32, 0.794);
+    background: rgba(11, 11, 11, 0.6);  /* transparente blureado */
+    backdrop-filter: blur(8px);
+    box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
+    width: 170rem;
+    font-size: 15px;
+}
+.modal-title-sobremi{
+    color: #fff;
+    margin-left: 59rem;
+    font-size: 20px;
+}
+#input-nombre{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 17rem;
+    margin-top: 3rem;
+    width: 102rem;
+    border-radius: 8px;
+}
+#file-perfil{
+    background-color: rgba(130, 130, 138, 0.642);
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+#textarea-descripcion{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 26rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    width: 102rem;
+}
+/* --------fin modal sobre mi---------- */
