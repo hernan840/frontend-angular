@@ -13,6 +13,7 @@ import { LoginComponent } from './componentes/modals/menu/login/login.component'
 import { EditInfoPerfilMComponent } from './componentes/modals/menu/edit-info-perfil-m/edit-info-perfil-m.component';
 import { InfoPortadaComponent } from './componentes/modals/portada/info-portada/info-portada.component';
 import { NuevaRedSocialComponent } from './componentes/modals/portada/nueva-red-social/nueva-red-social.component';
+import { EditarRedSocialComponent } from './componentes/modals/portada/editar-red-social/editar-red-social.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NuevaRedSocialComponent } from './componentes/modals/portada/nueva-red-
     LoginComponent,
     EditInfoPerfilMComponent,
     InfoPortadaComponent,
-    NuevaRedSocialComponent
+    NuevaRedSocialComponent,
+    EditarRedSocialComponent
   ],
   imports: [
     BrowserModule
