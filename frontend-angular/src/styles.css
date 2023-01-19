@@ -39,3 +39,9 @@ html::-webkit-scrollbar-thumb{
     background:var(--yellow);
 }
 
+
+/* generales para los modales */
+.modal-body{
+    color: aliceblue;  /*color de las letras en el modal*/
+         
+ }

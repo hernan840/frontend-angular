@@ -38,3 +38,4 @@ ________________________________________________________________________________
 ## crear componente proyectos y acomodar su seccion de css
 
 ## crear componente modal login y acomodar su seccion de css
+## crear componente modal editar informacion de perfil de menu  y acomodar su seccion de css
