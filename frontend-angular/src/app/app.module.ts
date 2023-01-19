@@ -16,6 +16,7 @@ import { NuevaRedSocialComponent } from './componentes/modals/portada/nueva-red-
 import { EditarRedSocialComponent } from './componentes/modals/portada/editar-red-social/editar-red-social.component';
 import { EditarSobremiComponent } from './componentes/modals/sobremi/editar-sobremi/editar-sobremi.component';
 import { NuevaExperienciaComponent } from './componentes/modals/experiencia/nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './componentes/modals/experiencia/editar-experiencia/editar-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NuevaExperienciaComponent } from './componentes/modals/experiencia/nuev
     NuevaRedSocialComponent,
     EditarRedSocialComponent,
     EditarSobremiComponent,
-    NuevaExperienciaComponent
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule

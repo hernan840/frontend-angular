@@ -47,3 +47,4 @@ ________________________________________________________________________________
 ## crear componente modal editar sobre mi y acomodar su seccion de css
 
 ## crear componente modal nueva experiencia laboral y acomodar su seccion de css
+## crear componente modal editar experiencia laboral y acomodar su seccion de css
