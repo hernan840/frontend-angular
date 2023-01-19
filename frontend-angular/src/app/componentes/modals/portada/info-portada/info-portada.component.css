@@ -1,0 +1,78 @@
+/* --------inicio modal portada---------- */
+.btn{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 30rem;
+    font-size:10px;
+    margin-top: 3rem;
+}
+ .modal-body .input{
+     margin-right: 3rem;
+ }
+ .contet-modal-portada{
+     margin-top: 50rem;
+     background-color: rgba(27, 21, 32, 0.794);
+     background: rgba(11, 11, 11, 0.6);  /* transparente blureado */
+     backdrop-filter: blur(8px);
+     box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
+     width: 180rem;
+     font-size: 15px;
+ }
+ .modal-title-portada{
+     margin-left: 50rem;
+     color: #fff;
+     font-size: 20px;
+ }
+ #file-perfil-portada-banner{
+     background-color: rgba(130, 130, 138, 0.642);
+     margin-left: 8rem;
+     margin-top: 3rem;
+     
+ }
+ #file-portada{
+     background-color: rgba(130, 130, 138, 0.642);
+     margin-left: 3rem;
+     margin-top: 3rem;
+
+ }
+ #input-nombre{
+     background-color: rgba(207, 207, 222, 0.947);
+     margin-left: 20rem;
+     margin-top: 3rem;
+     width: 102rem;
+     border-radius: 8px;
+ }
+ #input-titulo{
+     background-color: rgba(207, 207, 222, 0.947);
+     margin-left: 26rem;
+     margin-top: 3rem;
+     margin-bottom: 5rem;
+     width: 102rem;
+     border-radius: 8px;
+ }
+
+ .contenedor-btn-edit-borrar-red{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: px;
+    display: flex;
+}
+
+.btn-borrar-red{
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-left: 9rem;
+    top: -80px;
+    right: -5px;
+}
+
+.btn-editar-red{
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -80px;
+    
+}

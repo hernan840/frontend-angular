@@ -11,6 +11,7 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { LoginComponent } from './componentes/modals/menu/login/login.component';
 import { EditInfoPerfilMComponent } from './componentes/modals/menu/edit-info-perfil-m/edit-info-perfil-m.component';
+import { InfoPortadaComponent } from './componentes/modals/portada/info-portada/info-portada.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditInfoPerfilMComponent } from './componentes/modals/menu/edit-info-pe
     HabilidadesComponent,
     ProyectosComponent,
     LoginComponent,
-    EditInfoPerfilMComponent
+    EditInfoPerfilMComponent,
+    InfoPortadaComponent
   ],
   imports: [
     BrowserModule
