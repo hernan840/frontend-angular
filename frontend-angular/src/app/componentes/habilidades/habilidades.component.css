@@ -1,4 +1,5 @@
 /*------------------- habilidades -------------------*/
+
 .habilidades{
     height: 100vh;
    color: rgb(243, 231, 231);
@@ -91,3 +92,49 @@
     background: #0be58d;
 }
 
+
+/* botones */
+.btn{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 30rem;
+    font-size:10px;
+    margin-top: 3rem;
+ }
+.contenedor-btn-edit-borrar-skill{
+    width: 8rem;
+    height: 3rem;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    /* margin-right:  -90rem;    */
+}
+.btn-editar-skill{
+    /* border-radius: 100px; */
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 90px;
+}
+.btn-borrar-skill{
+    /* border-radius: 100px; */
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    margin-left: 10rem;
+    top: -20px;
+    left: 90px;
+}
+.btn-nueva-habilidad{
+    margin-left: auto;
+    width: 40rem;
+}

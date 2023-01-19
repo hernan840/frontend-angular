@@ -49,4 +49,7 @@ ________________________________________________________________________________
 ## crear componente modal nueva experiencia laboral y acomodar su seccion de css
 ## crear componente modal editar experiencia laboral y acomodar su seccion de css
 
-## crear componente educacion, acomodar su seccion de css. Y ajustar vista de btn de menu editar,entrar y salir
+## crear componente modal nueva educacion, acomodar su seccion de css. Y ajustar vista de btn de menu editar,entrar y salir
+## crear componente modal editar educacion, acomodar su seccion de css.
+
+## crear componente modal nueva habilidad, acomodar su seccion de css.
