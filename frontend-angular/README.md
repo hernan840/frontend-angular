@@ -36,3 +36,5 @@ ________________________________________________________________________________
 ## crear componente educacion y acomodar su seccion de css
 ## crear componente habilidades y acomodar su seccion de css
 ## crear componente proyectos y acomodar su seccion de css
+
+## crear componente modal login y acomodar su seccion de css

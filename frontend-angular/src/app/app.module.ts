@@ -9,6 +9,8 @@ import { ExperienciasComponent } from './componentes/experiencias/experiencias.c
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { LoginComponent } from './componentes/modals/menu/login/login.component';
+import { EditInfoPerfilMComponent } from './componentes/modals/menu/edit-info-perfil-m/edit-info-perfil-m.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
     ExperienciasComponent,
     EducacionComponent,
     HabilidadesComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LoginComponent,
+    EditInfoPerfilMComponent
   ],
   imports: [
     BrowserModule
