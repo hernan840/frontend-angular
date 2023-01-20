@@ -53,3 +53,5 @@ ________________________________________________________________________________
 ## crear componente modal editar educacion, acomodar su seccion de css.
 
 ## crear componente modal nueva habilidad, acomodar su seccion de css.
+## crear componente modal editar habilidad, acomodar su seccion de css.
+

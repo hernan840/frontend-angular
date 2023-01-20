@@ -20,6 +20,7 @@ import { EditarExperienciaComponent } from './componentes/modals/experiencia/edi
 import { NuevaEducacionComponent } from './componentes/modals/educacion/nueva-educacion/nueva-educacion.component';
 import { EditarEducacionComponent } from './componentes/modals/educacion/editar-educacion/editar-educacion.component';
 import { NuevaHabilidadComponent } from './componentes/modals/habilidad/nueva-habilidad/nueva-habilidad.component';
+import { EditarHabilidadComponent } from './componentes/modals/habilidad/editar-habilidad/editar-habilidad.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NuevaHabilidadComponent } from './componentes/modals/habilidad/nueva-ha
     EditarExperienciaComponent,
     NuevaEducacionComponent,
     EditarEducacionComponent,
-    NuevaHabilidadComponent
+    NuevaHabilidadComponent,
+    EditarHabilidadComponent
   ],
   imports: [
     BrowserModule
