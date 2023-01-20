@@ -45,3 +45,7 @@ html::-webkit-scrollbar-thumb{
     color: aliceblue;  /*color de las letras en el modal*/
          
  }
+
+ .btn:hover{
+    background-color: #a47ed598;
+ }

@@ -81,6 +81,9 @@
     font-size:10px;
     margin-top: 3rem;
 }
+.btn:hover{
+    background-color: #a47ed598;
+ }
 
 .btn-editar-portada{
     border-radius: 100px;

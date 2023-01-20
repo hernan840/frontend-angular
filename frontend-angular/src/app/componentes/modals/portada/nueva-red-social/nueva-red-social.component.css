@@ -7,7 +7,11 @@
     width: 30rem;
     font-size:10px;
     margin-top: 3rem;
-}.contet-modal-nuevared{
+}
+.btn:hover{
+    background-color: #a47ed598;
+ }
+.contet-modal-nuevared{
     margin-top: 50rem;
     background-color: rgba(27, 21, 32, 0.794);
     background: rgba(11, 11, 11, 0.6);  /* transparente blureado */

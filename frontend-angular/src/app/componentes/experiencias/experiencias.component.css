@@ -103,6 +103,10 @@
    font-size:10px;
    margin-top: 3rem;
 }
+.btn:hover{
+   background-color: #a47ed598;
+}
+
  .contenedor-btn-edit-borrar-experiencia{
    /* width: 8rem; */
    /* height: 1rem; */

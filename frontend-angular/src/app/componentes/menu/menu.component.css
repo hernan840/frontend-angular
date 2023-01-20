@@ -89,6 +89,11 @@ header .logo-argProg .botnes-login{   /* colocar boton uno sobre otro*/
     font-size:10px;
     margin-top: 3rem;
  }
+ .btn:hover{
+    background-color: #a47ed598;
+ }
+
+
  .btn-editar-perfil-head{
     border-radius: 100px;
     background-color: rgba(0, 0, 0, 0.479);

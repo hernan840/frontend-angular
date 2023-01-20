@@ -102,6 +102,10 @@
     font-size:10px;
     margin-top: 3rem;
  }
+ .btn:hover{
+    background-color: #a47ed598;
+ }
+
 .contenedor-btn-edit-borrar-skill{
     width: 8rem;
     height: 3rem;

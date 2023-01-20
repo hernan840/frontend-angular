@@ -26,38 +26,52 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-______________________________________________________________________________________________________________________
+---
+
 ## instalar dependencia bootstrap con npm install bootstrap y copiar la de fontawesome
 
 ## crear componente menu y acomodar su seccion de css
+
 ## crear componente portada y acomodar su seccion de css
+
 ## crear componente sobre mi y acomodar su seccion de css
+
 ## crear componente experiencias y acomodar su seccion de css
+
 ## crear componente educacion y acomodar su seccion de css
+
 ## crear componente habilidades y acomodar su seccion de css
+
 ## crear componente proyectos y acomodar su seccion de css
 
 ## crear componente modal login y acomodar su seccion de css
-## crear componente modal editar informacion de perfil de menu  y acomodar su seccion de css
+
+## crear componente modal editar informacion de perfil de menu y acomodar su seccion de css
 
 ## crear componente modal editar informacion de portada y acomodar su seccion de css
+
 ## crear componente modal nueva red social y acomodar su seccion de css
+
 ## crear componente modal editar red social y acomodar su seccion de css
 
 ## crear componente modal editar sobre mi y acomodar su seccion de css
 
 ## crear componente modal nueva experiencia laboral y acomodar su seccion de css
+
 ## crear componente modal editar experiencia laboral y acomodar su seccion de css
 
 ## crear componente modal nueva educacion, acomodar su seccion de css. Y ajustar vista de btn de menu editar,entrar y salir
+
 ## crear componente modal editar educacion, acomodar su seccion de css.
 
 ## crear componente modal nueva habilidad, acomodar su seccion de css.
+
 ## crear componente modal editar habilidad, acomodar su seccion de css.
 
 ## crear componente modal nuevo proyecto, acomodar su seccion de css.
+
 ## crear componente modal editar proyecto, acomodar su seccion de css.
 
 ## acomode los btn de portada y sobre mi
 
-
+## colocar efecto al pasar el cursor sobre el btn 
