@@ -68,3 +68,47 @@
     text-align: left;
 
 }
+
+/* botones */
+.btn{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 30rem;
+    font-size:10px;
+    margin-top: 3rem;
+}
+
+.contenedor-btn-edit-borrar-sobremi{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn-editar-sobremi {
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    margin-left: 40rem; 
+
+}
+.btn-borrar-sobremi{
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 8rem;
+    height: 8rem;
+    color: #fff;
+    position: absolute;
+    margin-left: 40rem;
+}

@@ -58,4 +58,6 @@ ________________________________________________________________________________
 ## crear componente modal nuevo proyecto, acomodar su seccion de css.
 ## crear componente modal editar proyecto, acomodar su seccion de css.
 
+## acomode los btn de portada y sobre mi
+
 
