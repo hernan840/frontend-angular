@@ -1,0 +1,43 @@
+ <!-- Modal nuevo proyecto-->
+ <div class="modal fade" id="modalNuevoProyecto" tabindex="-1" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+     <div class="modal-content contet-modal-proyecto">
+         <div class="modal-header">
+             <h1 class="modal-title-proyecto" id="exampleModalLabel">Nuevo Proyecto</h1>
+             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                 aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+             <p>
+                 <label for="file">Subir Foto de Proyecto</label>
+                 <input type="file" id="file-foto-proyecto">
+             </p>
+             <p>
+                 <label for="input">Nombre de Proyecto</label>
+                 <input type="text" id="input-nombre-proyecto" placeholder="Proyecto">
+             </p>
+             <p>
+                 <label for="date">Fecha de Relizacion</label>
+                 <input type="date" id="date-fecha-proyecto">
+             </p>
+
+             <p>
+                 <label for="textarea">Descricion de Proyecto</label>
+                 <textarea id="textarea-descripcion-proyecto" rows="3" style="height: 110px;"></textarea>
+             </p>
+             <p>
+                 <label for="url">URL del Proyecto</label>
+                 <input type="url" id="url-proyecto" placeholder="http://">
+             </p>
+
+
+         </div>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+             <button type="button" class="btn btn-primary">Guardar</button>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- fin modal para  nuevo proyecto  -->
