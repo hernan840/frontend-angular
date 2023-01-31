@@ -25,6 +25,7 @@ import { NuevoProyectoComponent } from './componentes/modals/proyecto/nuevo-proy
 import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-proyecto/editar-proyecto.component';
 import { Pag404Component } from './componentes/pag404/pag404.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { IndexComponent } from './componentes/index/index.component';
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
     
   ],
   providers: [],

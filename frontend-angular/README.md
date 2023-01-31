@@ -78,4 +78,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ----------------------------------------------------------------------------
 ## se coloco el fondo de particulas y crao la pagina de error 404
 ## se acomodo los selectores de los modales segun corresponda en el componente  al final del archivo componen.html
+## se creo el archivo de routin el index necesario donde se coloco los selectores de la pagina, por ultimo edito el archivo app.component.html agregando el selector de routin <router-outlet></router-outlet>. Y el componente de la pagina de error 404
 
