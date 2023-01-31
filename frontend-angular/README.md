@@ -76,4 +76,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## colocar efecto al pasar el cursor sobre el btn 
 
-## se coloco el fondo de particulas
+## se coloco el fondo de particulas y crao la pagina de error 404
