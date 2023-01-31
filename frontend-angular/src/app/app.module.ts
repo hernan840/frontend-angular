@@ -23,6 +23,8 @@ import { NuevaHabilidadComponent } from './componentes/modals/habilidad/nueva-ha
 import { EditarHabilidadComponent } from './componentes/modals/habilidad/editar-habilidad/editar-habilidad.component';
 import { NuevoProyectoComponent } from './componentes/modals/proyecto/nuevo-proyecto/nuevo-proyecto.component';
 import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-proyecto/editar-proyecto.component';
+import { Pag404Component } from './componentes/pag404/pag404.component';
+import { IndexComponent } from './componentes/index/index.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +49,14 @@ import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-pr
     NuevaHabilidadComponent,
     EditarHabilidadComponent,
     NuevoProyectoComponent,
-    EditarProyectoComponent
+    EditarProyectoComponent,
+    Pag404Component,
+    IndexComponent
+    
   ],
   imports: [
     BrowserModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -75,3 +75,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## acomode los btn de portada y sobre mi
 
 ## colocar efecto al pasar el cursor sobre el btn 
+
+## se coloco el fondo de particulas
