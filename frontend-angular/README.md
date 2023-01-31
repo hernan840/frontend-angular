@@ -75,5 +75,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## acomode los btn de portada y sobre mi
 
 ## colocar efecto al pasar el cursor sobre el btn 
-
+----------------------------------------------------------------------------
 ## se coloco el fondo de particulas y crao la pagina de error 404
+## se acomodo los selectores de los modales segun corresponda en el componente  al final del archivo componen.html
+
