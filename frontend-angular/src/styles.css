@@ -4,10 +4,10 @@
     --yellow:#b99928c8;
 }
 body{
-    background-color: #da2e2e;
+    /* background-color: #da2e2e; */
     overflow-x: hidden;
     padding-left: 35rem;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 *{
@@ -55,3 +55,5 @@ html::-webkit-scrollbar-thumb{
  .btn:hover{
     background-color: #a47ed598;
  }
+
+ 

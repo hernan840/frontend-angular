@@ -1,8 +1,8 @@
 /*-------------------seccion portada / banner -------------------*/
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.1), rgba(30,35,38,1)),
-    url("https://drive.google.com/file/d/1b56FJAh6QXhwOiE3XYZSUIqUlvZDNMsF/view?usp=share_link");
-    background-size: cover;
+    url("/assets/img/fondo-portada.jpg");
+    /* background-size: cover; */
     height: 100vh;
     color: rgb(243, 231, 231);
     display: flex;

@@ -1,9 +1,9 @@
- <!-- seccion heater/menu -->
- <header>
+<!-- seccion heater/menu -->
+<header>
     <div class="usuario">
-        <img src="https://drive.google.com/file/d/1pWjnJ6mk-xNr89ciMBzEpzFEUr25nC2U/view?usp=share_link" alt="">
-        <h3 class="nombre">Hernan Flores</h3>
-        <p class="post">Full Stack <br> Developer Jr</p>
+        <img [src]="miPorfolio.imgPerfilMenu" alt="">
+        <h3 class="nombre">{{miPorfolio.name}}</h3>
+        <p class="post">{{miPorfolio.position}} </p>
 
         <button type="button" class="btn btn-primary btn-editar-perfil-head" data-bs-toggle="modal"
             data-bs-target="#modalHead">
@@ -28,12 +28,10 @@
 
         <div class="botnes-login">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btm-login" data-bs-toggle="modal"
-                data-bs-target="#modalLogin">
+            <button type="button" class="btn btn-primary btm-login" data-bs-toggle="modal" data-bs-target="#modalLogin">
                 <i class="fa-solid fa-user"></i> Entrar
             </button>
-            <button type="button" class="btn btn-primary btm-logout" data-bs-toggle="modal"
-                data-bs-target="#logout">
+            <button type="button" class="btn btn-primary btm-logout" data-bs-toggle="modal" data-bs-target="#logout">
                 <i class="fa-solid fa-user-slash"></i> Salir
             </button>
 

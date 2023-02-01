@@ -2,10 +2,10 @@
 <section id="inicio" class="inicio">
     <div class="contenido-banner">
         <div class="contenedor-img">
-            <img src="/assets/img/perfil_portada.jpg" alt="" style="margin-top: 5rem;">
+            <img [src]="miPorfolio.imgPerfilPurtada" alt="" style="margin-top: 5rem;">
         </div>
-        <h1>Hernan Flores</h1>
-        <h2>Developer</h2>
+        <h1>{{miPorfolio.name}}</h1>
+        <h2>{{miPorfolio.position}}</h2>
         <div class="redes">
             <a href="#">
                 <i class="fa-brands fa-facebook-f"></i>

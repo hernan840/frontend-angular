@@ -26,6 +26,8 @@ import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-pr
 import { Pag404Component } from './componentes/pag404/pag404.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
     
   ],
   providers: [],

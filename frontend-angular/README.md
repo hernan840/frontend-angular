@@ -79,4 +79,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## se coloco el fondo de particulas y crao la pagina de error 404
 ## se acomodo los selectores de los modales segun corresponda en el componente  al final del archivo componen.html
 ## se creo el archivo de routin el index necesario donde se coloco los selectores de la pagina, por ultimo edito el archivo app.component.html agregando el selector de routin <router-outlet></router-outlet>. Y el componente de la pagina de error 404
+----------------------------------------------------------------------------
+## se aplico data-bs-backdrop="static" 
+para que el modal solo se cierre cuando se presione canselar o X. dejando sin efecto el que se cierre al hacer click fuera del modal
+## se creo el servicio para obtener datos del json
+pasos:
+1 crear el servicio 
+2 inyectamos en el constructor del componente el servicio
+3 se importo el  el servicio HttpClientModule en el app.module.ts
+4 inyectamos el servicio de http client en el constructor en porfolio.service.ts
+5 se crea el json en assets
+6 usamos suscribe en el ts del componente, se define una variable miPorfolio del tipo any y en oninit asignamos la variable mi porfolio  con data
+7 en el templateUrl html del componete se uso Binding Interpolation para cadenas y Property para las imagenes
+
+se aplico a menu como en portada.
 
