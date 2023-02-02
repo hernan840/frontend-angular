@@ -64,8 +64,10 @@
 .sobre_mi .contenido-sobremi .descripcion p{
     margin-top: 40px;
     margin-left: 8rem;
+    margin-right: 20rem;
     font-size: 20px;
-    text-align: left;
+    text-align: justify;
+    text-transform: none;
 
 }
 

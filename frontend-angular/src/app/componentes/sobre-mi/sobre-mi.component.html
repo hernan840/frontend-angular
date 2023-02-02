@@ -2,7 +2,7 @@
 <section id="sobre_mi" class="sobre_mi">
     <div class="contenido-sobremi">
         <div class="contenedor-img">
-            <img src="/assets/img/perfil_portada.jpg" alt="">
+            <img [src]="miPorfolio.imgPerfilSibreMi" alt="">
         </div>
         <div class="contenedor-btn-edit-borrar-sobremi">
             <button type="button" class="btn btn-primary btn-editar-sobremi" data-bs-toggle="modal"
@@ -15,15 +15,8 @@
         </div>
 
         <div class="descripcion">
-            <h1>Hernan Flores</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sunt omnis molestiae eaque harum id
-                ab accusamus, eligendi porro reiciendis nihil tenetur totam cupiditate quas, dolore est rerum itaque
-                maiores.</p><br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa error ad doloribus iure corrupti,
-                nostrum ipsum rem voluptas alias consectetur quis nihil molestiae possimus quas perspiciatis
-                quisquam non earum quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-                delectus at quisquam ducimus facere exercitationem, accusamus deleniti voluptate cumque, aperiam
-                officiis. Molestias consectetur modi temporibus minima saepe. Similique, provident minus!</p>
+            <h1>{{miPorfolio.name}}</h1>
+            <p>{{miPorfolio.about}}</p>
         </div>
     </div>
 </section>

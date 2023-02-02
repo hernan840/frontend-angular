@@ -94,3 +94,6 @@ pasos:
 
 se aplico a menu como en portada.
 
+# se aplico el servicio get
+ a los compornentes menu, portada y sobre mi. haciendo el uso de Binding Interpolation para cadenas y Property para las imagenes
+
