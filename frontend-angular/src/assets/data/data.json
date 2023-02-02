@@ -61,9 +61,18 @@
         "start": "2010",
         "end": "Cursando"
     }
-
+    ],
+    "project": [{
+        "nameProyect": "Porfolio - Frontend",
+        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado estatico del porfolio - Frontend",
+        "img": "/assets/img/portafolio.PNG",
+        "end": "2022"
+    },
+    {
+        "nameProyect": "Porfolio - Backend",
+        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+        "img": "/assets/img/portafolio.PNG",
+        "end": "2023"
+    }
     ]
-  
-
-
 }

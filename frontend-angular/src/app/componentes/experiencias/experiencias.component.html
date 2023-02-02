@@ -9,9 +9,8 @@
             </button>
 
         </div>
-        <div class="box-container-experiencias">
-            <ul>
-                <li *ngFor="let experiencia of experienciaLista">
+        <div class="box-container-experiencias" *ngFor="let experiencia of experienciaLista">
+          
                     <div class="box-experiencia">
                         <img [src]="experiencia.img" alt="">
                         <h2>{{experiencia.company}}</h2>
@@ -29,8 +28,7 @@
                             </button>
                         </div>
                     </div>
-                </li>
-            </ul>
+           
            
         </div>
     </div>

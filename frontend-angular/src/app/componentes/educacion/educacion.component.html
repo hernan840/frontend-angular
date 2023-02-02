@@ -9,30 +9,26 @@
             </button>
 
         </div>
-        <div class="box-container-educacion">
-            <ul>
-                <li *ngFor="let educacion of educacionLista">
-                    <div class="box">
-                        <i class="fas fa-graduation-cap"></i>
-                        <img [src]="educacion.img" alt="">
-                        <span>{{educacion.end}}</span>
-                        <h3>{{educacion.school}}</h3>
-                        <h2>Titulo :{{educacion.title}}</h2>
-                        <p>{{educacion.description}}</p>
-                        <div class="contenedor-btn-edit-borrar-educacion">
-                            <button type="button" class="btn btn-primary btn-editar-educacion" data-bs-toggle="modal"
-                                data-bs-target="#modalEducacion">
-                                <i class="fa-solid fa-pencil"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary btn-borrar-educacion" data-bs-toggle="modal">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="box-container-educacion" *ngFor="let educacion of educacionLista">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <img [src]="educacion.img" alt="">
+                <span>{{educacion.end}}</span>
+                <h3>{{educacion.school}}</h3>
+                <h2>Titulo :{{educacion.title}}</h2>
+                <p>{{educacion.description}}</p>
+                <div class="contenedor-btn-edit-borrar-educacion">
+                    <button type="button" class="btn btn-primary btn-editar-educacion" data-bs-toggle="modal"
+                        data-bs-target="#modalEducacion">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-borrar-educacion" data-bs-toggle="modal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
 
-      
+
         </div>
 
 
