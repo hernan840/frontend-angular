@@ -97,3 +97,6 @@ se aplico a menu como en portada.
 # se aplico el servicio get
  a los compornentes menu, portada y sobre mi. haciendo el uso de Binding Interpolation para cadenas y Property para las imagenes
 
+---------------------------------------------------------------------------
+# se agrdo el servicio get a los componentes experiencia y educacion
+como ambos son una lista de elementos se uso en el tag li lo siguiente <li *ngFor="let educacion of educacionLista">

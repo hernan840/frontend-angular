@@ -42,10 +42,11 @@
  }
  
  .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia{
-    width: 300rem;
+    width: 280rem;
     height: 50rem;
     margin:5rem 1rem;
-    padding-left: 9rem;
+    padding-left: 3rem;
+    padding-right: 10rem;
     border-left: .9rem solid rgb(33, 15, 226);
     border-right: .9rem solid rgb(33, 15, 226);
     position: relative;
@@ -85,12 +86,16 @@
     font-size: 7rem;
     color:#fff;
     padding-top: 1.5rem;
+    text-transform: none;
+
  }
  
  .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia p{
     font-size: 4rem;
     color:#eee;
     padding: 1rem 0;
+    text-transform: none;
+
  }
  
 

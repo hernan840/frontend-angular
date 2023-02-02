@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
+
 
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
-export class EducacionComponent {
+export class EducacionComponent implements OnInit {
+
+  educacionLista: any;
+
+  // inyectamos el servicio en el contructor
+  constructor(private datosPorfolio:PorfolioService) { }
+
+  // para acceder al servicio lo hace a traves de ngOnInit
+  ngOnInit(): void {
+    this.datosPorfolio.obtenerDatos().subscribe(data => {
+      console.log(data);
+      this.educacionLista= data.education;
+    });
+
+  }
+
 
 }

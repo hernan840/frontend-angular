@@ -10,78 +10,28 @@
 
         </div>
         <div class="box-container-experiencias">
-            <div class="box-experiencia">
-                <img src="/assets/img/ENET 2.png" alt="">
-                <h2>Monbre Escuela de Educación Técnica Nº 2 "Prof. Jesús Raúl Salazar"</h2>
-                <h2>PuestoTecnico en electr</h2>
-                <span> 2016</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id
-                    autem ident laborum quae, distinctio eaque temporibus!</p>
-
-                <div class="contenedor-btn-edit-borrar-experiencia">
-                    <button type="button" class="btn btn-primary btn-editar-experiencia" data-bs-toggle="modal"
-                        data-bs-target="#modalExperiencia">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-experiencia" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="box-experiencia">
-                <img src="/assets/img/ENET 2.png" alt="">
-                <h2>Monbre Escuela de Educación Técnica Nº 2 "Prof. Jesús Raúl Salazar"</h2>
-                <h2>Puestoecnico en electr</h2>
-                <span> 2017</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id
-                    autem ident laborum quae, distinctio eaque temporibus!</p>
-
-                <div class="contenedor-btn-edit-borrar-experiencia">
-                    <button type="button" class="btn btn-primary btn-editar-experiencia" data-bs-toggle="modal"
-                        data-bs-target="#modalExperiencia">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-experiencia" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="box-experiencia">
-                <img src="/assets/img/ENET 2.png" alt="">
-                <h2>Monbre Escuela de Educación Técnica Nº 2 "Prof. Jesús Raúl Salazar"</h2>
-                <h2>PuestoTecnico en electr</h2>
-                <span> 2019</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id
-                    autem ident laborum quae, distinctio eaque temporibus!</p>
-
-                <div class="contenedor-btn-edit-borrar-experiencia">
-                    <button type="button" class="btn btn-primary btn-editar-experiencia" data-bs-toggle="modal"
-                        data-bs-target="#modalExperiencia">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-experiencia" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="box-experiencia">
-                <img src="/assets/img/ENET 2.png" alt="">
-                <h2>Monbre Escuela de Educación Técnica Nº 2 "Prof. Jesús Raúl Salazar"</h2>
-                <h2>PuestoTecnico en electr</h2>
-                <span> 2018</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id
-                    autem ident laborum quae, distinctio eaque temporibus!</p>
-
-                <div class="contenedor-btn-edit-borrar-experiencia">
-                    <button type="button" class="btn btn-primary btn-editar-experiencia" data-bs-toggle="modal"
-                        data-bs-target="#modalExperiencia">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-experiencia" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </div>
+            <ul>
+                <li *ngFor="let experiencia of experienciaLista">
+                    <div class="box-experiencia">
+                        <img [src]="experiencia.img" alt="">
+                        <h2>{{experiencia.company}}</h2>
+                        <h2>{{experiencia.position}}</h2>
+                        <span> {{experiencia.start}} - {{experiencia.end}}</span>
+                        <p>{{experiencia.description}}</p>
+        
+                        <div class="contenedor-btn-edit-borrar-experiencia">
+                            <button type="button" class="btn btn-primary btn-editar-experiencia" data-bs-toggle="modal"
+                                data-bs-target="#modalExperiencia">
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-borrar-experiencia" data-bs-toggle="modal">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+           
         </div>
     </div>
 </section>
