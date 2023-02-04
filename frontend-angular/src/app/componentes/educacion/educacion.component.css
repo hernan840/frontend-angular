@@ -42,7 +42,7 @@
    /* padding-left: 6rem; */
 }
 .educacion .contenido-educacion .box-container-educacion .box{
-   width:120rem;
+   width:130rem;
    height: 90rem;
    margin:6rem 6rem;
    padding-left: 9rem;
@@ -50,6 +50,7 @@
    position: relative;
    box-shadow: 8px 0px 15px  #2b7ac9;
    border-radius: 10px;
+
    overflow: auto;                /*ocultar barra scrol*/
    scrollbar-width: none;
 }
@@ -78,14 +79,18 @@
    font-size: 7rem;
    color:#fff;
    padding-top: 1.5rem;
-   text-align: justify;
    text-transform: none;
+   justify-content: center;
+
 }
 .educacion .contenido-educacion .box-container-educacion .box h2{
    font-size: 5rem;
    color:#fff;
    padding-top: 1.5rem;
    text-transform: none;
+   justify-content: center;
+
+
 }
 .educacion .contenido-educacion .box-container-educacion .box p{
    font-size: 4rem;

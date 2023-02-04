@@ -108,3 +108,4 @@ como ambos poseen una lista de elementos para recorrerlo se usa *ngFor en el div
 se creo la seccion de json para ese servicio
 
 ## se ajisto las posiciones de las card de proyecto, estudio. 
+# se ajusto la visualizacion de habilidades

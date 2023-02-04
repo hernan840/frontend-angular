@@ -55,6 +55,7 @@
  .habilidades .contenido-habilidades .box-container-skills .skills{
     /* left: auto; */
     margin-bottom: 5rem;
+    
  }
  .habilidades .contenido-habilidades .box-container-skills .skills .skill-box{
     position: relative;
@@ -79,7 +80,7 @@
 }
 .habilidades .contenido-habilidades .box-container-skills .skills .skill-box .pocentaje{
     position: relative;
-    width: 90rem;
+    width: 70rem;
     height: 10px;
     background: #b5a6a6d6;
     box-shadow: 2px 0 6px #0be58d;
