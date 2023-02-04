@@ -127,6 +127,18 @@
         "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
         "img": "/assets/img/portafolio.PNG",
         "end": "2023"
+    },
+    {
+        "nameProyect": "Porfolio - Backend",
+        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+        "img": "/assets/img/portafolio.PNG",
+        "end": "2023"
+    },
+    {
+        "nameProyect": "Porfolio - Backend",
+        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+        "img": "/assets/img/portafolio.PNG",
+        "end": "2023"
     }
     ]
 }

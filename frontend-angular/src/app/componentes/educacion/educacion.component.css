@@ -33,17 +33,18 @@
    text-decoration: underline overline #FF3028;
 }
 .educacion .contenido-educacion .box-container-educacion {
+   /* align-items: center; */
    display: flex;
-   align-items: center;
-   justify-content: space-between;
+   flex-direction: row;
    flex-wrap: wrap;
+   justify-content: center;
    padding:1rem 0;
-   padding-left: 3rem;
+   /* padding-left: 6rem; */
 }
 .educacion .contenido-educacion .box-container-educacion .box{
-   width:150rem;
-   height: 80rem;
-   margin:5rem 1rem;
+   width:120rem;
+   height: 90rem;
+   margin:6rem 6rem;
    padding-left: 9rem;
    border-left: .9rem solid rgb(33, 15, 226);
    position: relative;

@@ -35,8 +35,9 @@
 }
 .habilidades .contenido-habilidades .box-container-skills{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-center;
     flex-wrap: wrap;
     padding:1rem 0;
     padding-right: 20rem;

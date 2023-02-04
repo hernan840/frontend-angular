@@ -106,3 +106,5 @@ como ambos poseen una lista de elementos para recorrerlo se usa *ngFor en el div
 --------------------------------------------------------------------------
 ## se agrego el servicio get al comopente habilidades
 se creo la seccion de json para ese servicio
+
+## se ajisto las posiciones de las card de proyecto, estudio. 

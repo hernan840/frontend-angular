@@ -38,10 +38,11 @@
  }
  
  .proyectos .contenido-proyectos .box-container-card{
+     /* align-items: center; */
      display: flex;
-     align-items: center;
-     justify-content: space-between;
+     flex-direction: row;
      flex-wrap: wrap;
+     justify-content: center;
      padding:1rem 0;
      padding-left: 3rem;
  }
@@ -49,7 +50,7 @@
  .proyectos .contenido-proyectos .box-container-card .card{
      width: 90rem;
      height: 110rem;
-     margin: 20px;
+     margin: 6rem;
      border-radius: 6px;
      overflow: hidden;
      background:rgb(9, 9, 9);

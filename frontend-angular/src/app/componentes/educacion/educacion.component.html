@@ -9,8 +9,8 @@
             </button>
 
         </div>
-        <div class="box-container-educacion" *ngFor="let educacion of educacionLista">
-            <div class="box">
+        <div class="box-container-educacion" >
+            <div class="box" *ngFor="let educacion of educacionLista">
                 <i class="fas fa-graduation-cap"></i>
                 <img [src]="educacion.img" alt="">
                 <span>{{educacion.end}}</span>
