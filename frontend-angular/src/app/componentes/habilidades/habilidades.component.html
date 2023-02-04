@@ -10,184 +10,75 @@
 
         </div>
         <div class="box-container-skills">
-
-            <div class="skills">
+            <div>
                 <h3>Duras</h3>
-                <div class="skill-box">
-                    <h4>Html</h4>
-                    <div class="pocentaje">
-                        <div style="width: 50%; font-size: 3.1rem; color: black" > 50%</div>
+                <div class="skills" *ngFor="let habilidadDura of habilidadDuraLista">
+                    <div class="skill-box">
+                        <h4>{{habilidadDura.name}}</h4>
+                        <div class="pocentaje">
+                            <div style="width: {{habilidadDura.progress}}; font-size: 3.1rem; color: black" > {{habilidadDura.progress}}</div>
+                        </div>
+                        <div class="contenedor-btn-edit-borrar-skill">
+                            <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
+                                data-bs-target="#modalskill">
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
+         
+                   
                 </div>
-                <div class="skill-box">
-                    <h4>css</h4>
-                    <div class="pocentaje">
-                        <div style="width: 40%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>java</h4>
-                    <div class="pocentaje">
-                        <div style="width: 50%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>Visual Studio Code</h4>
-                    <div class="pocentaje">
-                        <div style="width: 50%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>electricidad</h4>
-                    <div class="pocentaje">
-                        <div style="width: 60%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-               
             </div>
 
-            <div class="skills sk_blandas">
+            <div>
                 <h3>Blandas</h3>
-                <div class="skill-box">
-                    <h4>trabajo en equipo</h4>
-                    <div class="pocentaje">
-                        <div style="width: 70%;"></div>
+                <div class="skills sk_blandas" *ngFor="let habilidadBlanda of habilidadBlandasLista">
+                    <div class="skill-box">
+                        <h4>{{habilidadBlanda.name}}</h4>
+                        <div class="pocentaje">
+                            <div style="width: {{habilidadBlanda.progress}}; font-size: 3.1rem; color: black">{{habilidadBlanda.progress}}</div>
+                        </div>
+                        <div class="contenedor-btn-edit-borrar-skill">
+                            <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
+                                data-bs-target="#modalskill">
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>escucha activa</h4>
-                    <div class="pocentaje">
-                        <div style="width: 80%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>adapto al cambio</h4>
-                    <div class="pocentaje">
-                        <div style="width: 100%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <h4>puntualidad</h4>
-                    <div class="pocentaje">
-                        <div style="width: 100%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
+                
                 </div>
             </div>
 
-            <div class="skills sk-idioma">
+
+            <div>
                 <h3>Idiomas</h3>
-                <div class="skill-box">
-                    <h4>español</h4>
-                    <div class="pocentaje">
-                        <div style="width: 100%;"></div>
+                <div class="skills sk-idioma" *ngFor="let habilidadIdioma of habilidadIdiomaLista">
+                    <div class="skill-box">
+                        <h4>{{habilidadIdioma.name}}</h4>
+                        <div class="pocentaje">
+                            <div style="width: {{habilidadIdioma.progress}};font-size: 3.1rem; color: black">{{habilidadIdioma.progress}}</div>
+                        </div>
+                        <div class="contenedor-btn-edit-borrar-skill">
+                            <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
+                                data-bs-target="#modalskill">
+                                <i class="fa-solid fa-pencil"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
+                    
                 </div>
-                <div class="skill-box">
-                    <h4>ingles</h4>
-                    <div class="pocentaje">
-                        <div style="width: 50%;"></div>
-                    </div>
-                    <div class="contenedor-btn-edit-borrar-skill">
-                        <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
-                            data-bs-target="#modalskill">
-                            <i class="fa-solid fa-pencil"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary btn-borrar-skill" data-bs-toggle="modal">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
+
             </div>
+
         </div>
 
 

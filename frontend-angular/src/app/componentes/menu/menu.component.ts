@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   // para acceder al servicio lo hace a traves de ngOnInit
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
+      // console.log(data);
       this.miPorfolio= data;
     });
 

@@ -103,3 +103,6 @@ como ambos poseen una lista de elementos para recorrerlo se usa *ngFor en el div
 <div class="box-container-experiencias" *ngFor="let experiencia of experienciaLista">
 
 ## se adrego el servicio al componente de proyectos
+--------------------------------------------------------------------------
+## se agrego el servicio get al comopente habilidades
+se creo la seccion de json para ese servicio
