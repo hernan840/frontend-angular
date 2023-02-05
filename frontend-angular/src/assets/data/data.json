@@ -9,136 +9,144 @@
     "imgPerfilSibreMi": "/assets/img/perfil_portada.jpg",
     "about": "¡Hola!  Soy Hernan de la provincia de JUJUY-ARGENTINA. Actualmente estoy cursando la carrera de Ingeniería en la Universidad Nacional de Jujuy- UNJU. Mi objetivo profesional es desarrollarme en el campo profesionalmente como Desarrolladora Web Full Stack Jr. Poseo gran habilidad de escuchar y la capacidad de trabajar en equipos colaborativos de los cuales uno al escuchar diferentes perspectivas a un problema, adquiere conocimiento mejorando mis habilidades ante problemas futuros. Me considero responsable, puntual, creativo, con ganas de aprender las tecnologías vigentes del mercado en el desarrollo web que me permita desarrollarme profesionalmente.",
     
-    "experience": [{
-        "company": "CRC- Centro de Reacondicionamiento de Computadoras",
-        "position": "Encargado de deposito",
-        "description": "CRC es una ong que recibe insumo informaticos no usados los cuale los acondiciona para donar a instituciones que lo necesiten",
-        "img": "/assets/img/crc-jujuy.jpg",
-        "start": "2010",
-        "end": "2011"
-    },
-    {
-        "company": "Electrisista domiciliario",
-        "position": "Electrisista",
-        "description": "Trabajo autonomo en particular de instalacion domiciliaria",
-        "img": "/assets/img/NoImagen.png",
-        "start": "2018",
-        "end": "2020"
-    }
+    "experience": [
+        {
+            "id": 0,
+            "company": "CRC- Centro de Reacondicionamiento de Computadoras",
+            "position": "Encargado de deposito",
+            "description": "CRC es una ong que recibe insumo informaticos no usados los cuale los acondiciona para donar a instituciones que lo necesiten",
+            "img": "/assets/img/crc-jujuy.jpg",
+            "start": "2010",
+            "end": "2011"
+        },
+        {
+            "id": 1,
+            "company": "Electrisista domiciliario",
+            "position": "Electrisista",
+            "description": "Trabajo autonomo en particular de instalacion domiciliaria",
+            "img": "/assets/img/NoImagen.png",
+            "start": "2018",
+            "end": "2020"
+        }
     ],
 
 
-    "education": [{
-        "school": "Escuela de Educación Técnica Nº 2 Prof. Jesús Raúl Salazar",
-        "title": "Tecnico En Electronica",
-        "description": "Escuela Nacional de Educación TécnicaNo 2, brinda a sus alimnos los perfiles de egresados en Construcciones (Maestro Mayor de Obras) y Electrónica (Técnico en Electrónica)",
-        "img": "/assets/img/ENET 2.png",
-        "start": "1997",
-        "end": "2004"
-    },
-    {
-        "school": "Facultad de Ingenieria - UNJU",
-        "title": "Ing. Informatico",
-        "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
-        "img": "/assets/img/unju.png",
-        "start": "2010",
-        "end": "Cursando"
-    },
-    {
-        "school": "Facultad de Ingenieria - UNJU",
-        "title": "Ing. Informatico",
-        "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
-        "img": "/assets/img/unju.png",
-        "start": "2010",
-        "end": "Cursando"
-    },
-    {
-        "school": "Facultad de Ingenieria - UNJU",
-        "title": "Ing. Informatico",
-        "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
-        "img": "/assets/img/unju.png",
-        "start": "2010",
-        "end": "Cursando"
-    }
+    "education": [
+        {
+            "school": "Escuela de Educación Técnica Nº 2 Prof. Jesús Raúl Salazar",
+            "title": "Tecnico En Electronica",
+            "description": "Escuela Nacional de Educación TécnicaNo 2, brinda a sus alimnos los perfiles de egresados en Construcciones (Maestro Mayor de Obras) y Electrónica (Técnico en Electrónica)",
+            "img": "/assets/img/ENET 2.png",
+            "start": "1997",
+            "end": "2004"
+        },
+        {
+            "school": "Facultad de Ingenieria - UNJU",
+            "title": "Ing. Informatico",
+            "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
+            "img": "/assets/img/unju.png",
+            "start": "2010",
+            "end": "Cursando"
+        },
+        {
+            "school": "Facultad de Ingenieria - UNJU",
+            "title": "Ing. Informatico",
+            "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
+            "img": "/assets/img/unju.png",
+            "start": "2010",
+            "end": "Cursando"
+        },
+        {
+            "school": "Facultad de Ingenieria - UNJU",
+            "title": "Ing. Informatico",
+            "description": "La institucion brinda las carrera de grado de Ingenierias y Licenciaturas, como asi tambien carrera de pregrado - Tecnicaturas, Analista y Tecnico ",
+            "img": "/assets/img/unju.png",
+            "start": "2010",
+            "end": "Cursando"
+        }
     ],
 
     "ability":{
-        "duras":[{
-            "name": "HTML",
-            "progress": "60%"
-        },
-        {
-            "name": "CSS",
-            "progress": "60%"
-        },
-        {
-            "name": "JAVA",
-            "progress": "70%"
-        },
-        {
-            "name": "BOOTSTRAP",
-            "progress": "70%"
-        },
-        {
-            "name": "ANGULAR",
-            "progress": "40%"
-        },
-        {
-            "name": "ELECTRICIDAD",
-            "progress": "80%"
-        }
+        "duras":[
+            {
+                "name": "HTML",
+                "progress": "60"
+            },
+            {
+                "name": "CSS",
+                "progress": "60"
+            },
+            {
+                "name": "JAVA",
+                "progress": "70"
+            },
+            {
+                "name": "BOOTSTRAP",
+                "progress": "70"
+            },
+            {
+                "name": "ANGULAR",
+                "progress": "40"
+            },
+            {
+                "name": "ELECTRICIDAD",
+                "progress": "80"
+            }
         ],
-        "blandas":[{
-            "name": "TRABAJO EN EQUIPO",
-            "progress": "60%"
-        },
-        {
-            "name": "ESCUCHA AACTIVA",
-            "progress": "80%"
-        },
-        {
-            "name": "ADAPTO AL CAMBIO",
-            "progress": "70%"
-        },
-        {
-            "name": "PUNTUALIDAD",
-            "progress": "95%"
-        }
+        "blandas":[
+            {
+                "name": "TRABAJO EN EQUIPO",
+                "progress": "60"
+            },
+            {
+                "name": "ESCUCHA AACTIVA",
+                "progress": "80"
+            },
+            {
+                "name": "ADAPTO AL CAMBIO",
+                "progress": "70"
+            },
+            {
+                "name": "PUNTUALIDAD",
+                "progress": "95"
+            }
         ],
-        "idiomas":[{
-            "name": "ESPAÑOL",
-            "progress": "90%"
-        },
-        {
-            "name": "INGLES",
-            "progress": "40%"
-        }
+        "idiomas":[
+            {
+                "name": "ESPAÑOL",
+                "progress": "90"
+            },
+            {
+                "name": "INGLES",
+                "progress": "40"
+            }
         ]
 
     },
-    "project": [{
-        "nameProyect": "Porfolio - Frontend",
-        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado estatico del porfolio - Frontend",
-        "img": "/assets/img/portafolio.PNG",
-        "end": "2022"
-    },
-    {
-        "nameProyect": "Porfolio - Backend",
-        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
-        "img": "/assets/img/portafolio.PNG",
-        "end": "2023"
-    },
-    {
-        "nameProyect": "Porfolio - Backend",
-        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
-        "img": "/assets/img/portafolio.PNG",
-        "end": "2023"
-    },
-    {
-        "nameProyect": "Porfolio - Backend",
-        "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
-        "img": "/assets/img/portafolio.PNG",
-        "end": "2023"
-    }
+    "project": [
+        {
+            "nameProyect": "Porfolio - Frontend",
+            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado estatico del porfolio - Frontend",
+            "img": "/assets/img/portafolio.PNG",
+            "end": "2022"
+        },
+        {
+            "nameProyect": "Porfolio - Backend",
+            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+            "img": "/assets/img/portafolio.PNG",
+            "end": "2023"
+        },
+        {
+            "nameProyect": "Porfolio - Backend",
+            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+            "img": "/assets/img/portafolio.PNG",
+            "end": "2023"
+        },
+        {
+            "nameProyect": "Porfolio - Backend",
+            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
+            "img": "/assets/img/portafolio.PNG",
+            "end": "2023"
+        }
     ]
 }

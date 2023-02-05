@@ -8,6 +8,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
+  habilidadLista: any;
   habilidadDuraLista: any;
   habilidadBlandasLista: any;
   habilidadIdiomaLista: any;
@@ -19,10 +20,16 @@ export class HabilidadesComponent implements OnInit {
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe(data => {
       // console.log(data);
+
+
       this.habilidadDuraLista= data.ability.duras;
       this.habilidadBlandasLista= data.ability.blandas;
       this.habilidadIdiomaLista= data.ability.idiomas;
       console.log(data.ability.idiomas);
+
+      console.log("duras" in data.ability); //consulta si existe dentro la lista
+      
+
       
     });
 

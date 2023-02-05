@@ -16,7 +16,7 @@
                     <div class="skill-box">
                         <h4>{{habilidadDura.name}}</h4>
                         <div class="pocentaje">
-                            <div style="width: {{habilidadDura.progress}}; font-size: 3.1rem; color: black" > {{habilidadDura.progress}}</div>
+                            <div [style.width.%]="habilidadDura.progress" style="font-size: 3.1rem; color: black"> {{habilidadDura.progress}} %</div>
                         </div>
                         <div class="contenedor-btn-edit-borrar-skill">
                             <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
@@ -39,7 +39,7 @@
                     <div class="skill-box">
                         <h4>{{habilidadBlanda.name}}</h4>
                         <div class="pocentaje">
-                            <div style="width: {{habilidadBlanda.progress}}; font-size: 3.1rem; color: black">{{habilidadBlanda.progress}}</div>
+                            <div [style.width.%]="habilidadBlanda.progress" style="font-size: 3.1rem; color: black" >{{habilidadBlanda.progress}}%</div>
                         </div>
                         <div class="contenedor-btn-edit-borrar-skill">
                             <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"
@@ -62,7 +62,7 @@
                     <div class="skill-box">
                         <h4>{{habilidadIdioma.name}}</h4>
                         <div class="pocentaje">
-                            <div style="width: {{habilidadIdioma.progress}};font-size: 3.1rem; color: black">{{habilidadIdioma.progress}}</div>
+                            <div [style.width.%]="habilidadIdioma.progress" style="font-size: 3.1rem; color: black;" >{{habilidadIdioma.progress}}%</div>
                         </div>
                         <div class="contenedor-btn-edit-borrar-skill">
                             <button type="button" class="btn btn-primary btn-editar-skill" data-bs-toggle="modal"

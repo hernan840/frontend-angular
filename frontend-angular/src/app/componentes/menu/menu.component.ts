@@ -7,6 +7,7 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  // se crea una variable de instancia para almacenar lso datos con los que trata el servicio
   miPorfolio: any;
 
   // inyectamos el servicio en el contructor

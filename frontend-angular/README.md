@@ -109,3 +109,11 @@ se creo la seccion de json para ese servicio
 
 ## se ajisto las posiciones de las card de proyecto, estudio. 
 # se ajusto la visualizacion de habilidades
+--------------------------------------------------------------------------
+## se ajusto la visualizacion de habilidades usando ngStyle
+<div [style.width.%]="habilidadDura.progress" style="font-size: 3.1rem; color: black"> {{habilidadDura.progress}} %</div>
+
+## sabiendo como funciona el ngStyle se puso el fondo de portada
+[style.background]="'linear-gradient(to top, rgba(30,35,38,.1), rgba(30,35,38,1)), url(miPorfolio.backPortada); z-index=1'
+
+--------------------------------------------------------------------------
