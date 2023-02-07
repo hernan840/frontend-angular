@@ -53,9 +53,9 @@
 }
 /*------cuerpo login  user y pass---------*/
 .form{
-    width: auto;
+    width: 95%;
     height: 50px;
-    /* max-width: 400px; */
+    max-width: 140rem;
     position: relative;
     overflow: hidden;
     
@@ -84,7 +84,7 @@
 }
 .form .lbl-nombre:after, .form .lbl-password:after{
     content: '';
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: -1px;
     width: 100%;
@@ -130,8 +130,7 @@
 }
 
 /*--------- fin modal login -------- */
-
-
+/*---------para form responsivo-------- */
 .error{
     color:red
   }
@@ -139,6 +138,7 @@
  
 .mensaje{
     text-align: right;
+    font-size: 4rem;
 }
 
 .border-danger{

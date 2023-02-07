@@ -1,11 +1,8 @@
 /*-------------------seccion portada / banner -------------------*/
 .inicio{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0.621)),
-    url("/assets/img/fondo-portada.jpg");
-    /* {{miPorfolio.backPortada}} */
-    /* background: linear-gradient(to top, rgba(255, 249, 249, 0.973), rgba(0, 0, 0, 0.621));
-    background-image: url("/assets/img/fondo-portada.jpg"); */
-
+   /*  background: linear-gradient(to top, rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0.621)),
+    url("/assets/img/fondo-portada.jpg"); */
+   
     height: 100vh;
     color: rgb(243, 231, 231);
     display: flex;

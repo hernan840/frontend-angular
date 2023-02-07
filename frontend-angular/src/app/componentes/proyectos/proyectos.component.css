@@ -64,7 +64,7 @@
  }
  
  .proyectos .contenido-proyectos .box-container-card .card:hover{
-     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+     box-shadow: 5px 5px 20px rgba(43, 175, 20, 0.586);
      transform: translateY(-3%);
  }
  .proyectos .contenido-proyectos .card img{

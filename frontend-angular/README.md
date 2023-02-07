@@ -122,3 +122,5 @@ se creo la seccion de json para ese servicio
     minimo de contraseña de 8 caracteres
     solo se enviara cuando ambos campos sean validos colocando disabled en el btn
     <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Ingresar</button>
+## se incorporo la imagen de backPortada  
+ solo de tenia q agregar el sifno + +, en url('+miPorfolio.backPortada+')
