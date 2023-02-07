@@ -10,6 +10,10 @@
     box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
     height: 60rem;
     width: 130rem;
+
+
+    
+
     
 }
 .btn{
@@ -32,6 +36,12 @@
 .modal-header{
     height: 14rem;
 }
+/* .modal-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
 .modal-footer-login{
     height: 14rem;
     text-align: right;
@@ -43,11 +53,12 @@
 }
 /*------cuerpo login  user y pass---------*/
 .form{
-    width: 100%;
+    width: auto;
     height: 50px;
-    max-width: 400px;
+    /* max-width: 400px; */
     position: relative;
     overflow: hidden;
+    
 }
 .form input{
     width: 100%;
@@ -68,6 +79,7 @@
     pointer-events: none;
     border-bottom: 1px solid #c7c7c7;
     font-size: 5rem;
+    margin-bottom: ;
    
 }
 .form .lbl-nombre:after, .form .lbl-password:after{
@@ -120,3 +132,15 @@
 /*--------- fin modal login -------- */
 
 
+.error{
+    color:red
+  }
+  
+ 
+.mensaje{
+    text-align: right;
+}
+
+.border-danger{
+    color: rgb(64, 11, 223);
+}

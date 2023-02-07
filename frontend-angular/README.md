@@ -117,3 +117,8 @@ se creo la seccion de json para ese servicio
 [style.background]="'linear-gradient(to top, rgba(30,35,38,.1), rgba(30,35,38,1)), url(miPorfolio.backPortada); z-index=1'
 
 --------------------------------------------------------------------------
+## se aplico al modal login de tipo reactivo
+    donde se requere un email con @
+    minimo de contraseña de 8 caracteres
+    solo se enviara cuando ambos campos sean validos colocando disabled en el btn
+    <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Ingresar</button>
