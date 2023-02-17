@@ -1,5 +1,6 @@
-  <!-- Modal informacion head-->
-  <div class="modal fade" id="modalHead" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal informacion head-->
+<div class="modal fade" id="modalHead" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content contet-modal-head">
             <div class="modal-header">
@@ -7,24 +8,59 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <p>
-                    <label for="file">Subir Foto de Usuario</label>
-                    <input type="file" id="file-foto-usuario-head">
-                </p>
-                <p>
-                    <label for="input">Nombre y Apellido</label>
-                    <input type="text" id="input-nombre-usuario-head" placeholder="Nombre y Apellido">
-                </p>
-                <p>
-                    <label for="input">Titulo</label>
-                    <input type="text" id="input-head-titulo" placeholder="Titulo">
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="ImagenPerfil?.errors && ImagenPerfil?.touched">
+                            <p *ngIf="ImagenPerfil?.hasError('required')" class="error">
+                                La Foto es requerida.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <p>
+                        <label for="file">Subir Foto de Usuario</label>
+                        <input type="file" id="file-foto-usuario-head" formControlName="imgPerfilMenu">
+                    </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Name?.errors && Name?.touched">
+                            <p *ngIf="Name?.hasError('required')" class="error">
+                                Nombre y Apellido es requerido.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Nombre y Apellido</label>
+                        <input type="text" id="input-nombre-usuario-head" placeholder="Nombre y Apellido" formControlName="name" >
+                    </p>
+                    
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Position?.errors && Position?.touched">
+                            <p *ngIf="Position?.hasError('required')" class="error">
+                                El cargo es requerido.
+                            </p>
+                            <p *ngIf="Position?.errors?.['maxlength']" class="error">
+                                El cargo debe ser menos de 25 caracteres.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Puesto</label>
+                        <input type="text" id="input-head-titulo" placeholder="Titulo" formControlName="position">
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Guardar</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>

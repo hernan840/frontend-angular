@@ -124,3 +124,8 @@ se creo la seccion de json para ese servicio
     <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Ingresar</button>
 ## se incorporo la imagen de backPortada  
  solo de tenia q agregar el sifno + +, en url('+miPorfolio.backPortada+')
+
+--------------------------------------------------------------------------
+## se hizo reactivo a los formullarios
+   login
+   editar  informacion de menu

@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  /* se crea una cariable forms */
+  /* se crea una variable forms */
   forms: FormGroup;
 
   constructor(private formBuilder: FormBuilder){
@@ -28,12 +28,14 @@ export class LoginComponent implements OnInit {
    return this.forms.get("email");
   }
 
+  //metodos de validacion
+
   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
 
   get MailValid() {
-    return false
+    return this.Mail?.touched && !this.Mail?.valid
   }
 
   onEnviar(event: Event){
