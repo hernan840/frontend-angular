@@ -39,17 +39,21 @@ export class EditInfoPerfilMComponent implements OnInit {
     console.log(this.forms) //para ver por consola
     // Detenemos la propagación o ejecución del compotamiento submit de un form
     event.preventDefault; 
+
+  
  
     if (this.forms.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
       alert("Formulario Enviado!")
+      
     }
     /* else{
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.forms.markAllAsTouched(); 
       alert("Formulario NO enviado!")
     } */
+    
   }
 
 

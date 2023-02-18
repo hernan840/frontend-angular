@@ -50,18 +50,11 @@
 /* --------fin modal informacion head---------- */
 /*---------para form responsivo-------- */
 .error{
-    color:red
+    color:#76e805
   }
-  
- 
 .mensaje{
     text-align: right;
     font-size: 4rem;
 }
 
-.border-danger{
-   border-color: rgb(11, 223, 75);
-   border-width: 2px 0;
-   background-color: #8c06f2 ;
 
-}

@@ -1,33 +1,63 @@
-    <!-- Modal sobre mi-->
-    <div class="modal fade" id="modalSobreMi" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content contet-modal-sobremi">
-                <div class="modal-header">
-                    <h1 class="modal-title-sobremi" id="exampleModalLabel">Información Sobre Mi</h1>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
+<!-- Modal sobre mi-->
+<div class="modal fade" id="modalSobreMi" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contet-modal-sobremi">
+            <div class="modal-header">
+                <h1 class="modal-title-sobremi" id="exampleModalLabel">Información Sobre Mi</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
                 <div class="modal-body">
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Name?.errors && Name?.touched">
+                            <p *ngIf="Name?.hasError('required')" class="error">
+                                Nombre y Apellido es requerido.
+                            </p>
+
+                        </div>
+                    </div>
                     <p>
                         <label for="input">Ingrese Nombre</label>
-                        <input type="text" id="input-nombre" placeholder="Nombre y Apellido">
+                        <input type="text" id="input-nombre" placeholder="Nombre y Apellido" formControlName="name">
                     </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="ImgSobremi?.errors && ImgSobremi?.touched">
+                            <p *ngIf="ImgSobremi?.hasError('required')" class="error">
+                                La Foto es requerida.
+                            </p>
+
+                        </div>
+                    </div>
                     <p>
                         <label for="file">Subir Imagen de Perfil </label>
-                        <input type="file" id="file-perfil">
+                        <input type="file" id="file-perfil" formControlName="imgPerfilSibreMi">
                     </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Sobremi?.errors && Sobremi?.touched">
+                            <p *ngIf="Sobremi?.hasError('required')" class="error">
+                               Descripcion es requerida.
+                            </p>
+
+                        </div>
+                    </div>
                     <p>
                         <label for="textarea">Descripción</label>
-                        <textarea id="textarea-descripcion" rows="3" style="height: 110px;"></textarea>
+                        <textarea id="textarea-descripcion" rows="3" style="height: 110px;" formControlName="about"></textarea>
                     </p>
 
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Guardar</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-    <!-- fin Modal sobre mi-->
+</div>
+<!-- fin Modal sobre mi-->

@@ -44,7 +44,7 @@
                                 El cargo es requerido.
                             </p>
                             <p *ngIf="Position?.errors?.['maxlength']" class="error">
-                                El cargo debe ser menos de 25 caracteres.
+                                El Puesto debe ser menos de 25 caracteres.
                             </p>
                             
                         </div>
@@ -57,8 +57,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Guardar</button>
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary" >Guardar</button>
+                  
                 </div>
+                
 
             </form>
         </div>

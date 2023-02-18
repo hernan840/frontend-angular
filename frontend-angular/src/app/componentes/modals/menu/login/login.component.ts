@@ -30,13 +30,13 @@ export class LoginComponent implements OnInit {
 
   //metodos de validacion
 
-  get PasswordValid(){
+/*   get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
 
   get MailValid() {
     return this.Mail?.touched && !this.Mail?.valid
-  }
+  } */
 
   onEnviar(event: Event){
     console.log(this.forms) //para ver por consola

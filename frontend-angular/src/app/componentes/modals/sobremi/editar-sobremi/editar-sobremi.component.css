@@ -46,3 +46,11 @@
     width: 102rem;
 }
 /* --------fin modal sobre mi---------- */
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 4rem;
+}

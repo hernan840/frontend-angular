@@ -39,12 +39,25 @@
     width: 102rem;
     border-radius: 8px;
 }
-#date-fecha-experiencia{
+#date-fecha-experiencia-inicio{
     background-color: rgba(207, 207, 222, 0.947);
-    margin-left: 27rem;
+    margin-left: 14rem;
     margin-top: 3rem;
-    width: 102rem;
+    width: 33rem;
     border-radius: 8px;
+}
+#date-fecha-experiencia-fin{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 14rem;
+    margin-top: 3rem;
+    width: 33rem;
+    border-radius: 8px;
+}
+.fechas{
+    display: flex;
+}
+.fecha-fin{
+    margin-left: 5rem;
 }
 #file-logo-experiencia{
     background-color: rgba(130, 130, 138, 0.642);

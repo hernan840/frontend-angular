@@ -129,3 +129,7 @@ se creo la seccion de json para ese servicio
 ## se hizo reactivo a los formullarios
    login
    editar  informacion de menu
+
+--------------------------------------------------------------------------
+## se hizo reactivo al formulario de sobre mi
+## se agrego fecha de fin e inicio en modal experiencia

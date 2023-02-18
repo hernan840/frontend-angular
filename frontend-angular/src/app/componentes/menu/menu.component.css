@@ -33,6 +33,7 @@ header .usuario img{
 header .usuario .post{
     font-size: 2.4rem;
     color:#eee;
+    width: 20rem;
 }
 header .usuario .nombre{
     font-size: 3.5rem;
