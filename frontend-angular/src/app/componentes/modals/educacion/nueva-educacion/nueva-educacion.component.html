@@ -1,43 +1,115 @@
-  <!-- Modal nueva educacion-->
-  <div class="modal fade" id="modalNuevaEducacion" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content contet-modal-educacion">
-          <div class="modal-header">
-              <h1 class="modal-title-educacion" id="exampleModalLabel">Información de Educacion</h1>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                  aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <p>
-                  <label for="input">Nombre</label>
-                  <input type="text" id="input-nombre-educacion" placeholder="Institucion">
-              </p>
-              <p>
-                  <label for="input">Título</label>
-                  <input type="text" id="input-nombre-titulo" placeholder="Titulo ">
-              </p>
-              <p>
-                  <label for="date">Fecha de Realización</label>
-                  <input type="date" id="date-fecha-educacion">
-              </p>
+<!-- Modal nueva educacion-->
+<div class="modal fade" id="modalNuevaEducacion" tabindex="-1" data-bs-backdrop="static"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contet-modal-educacion">
+            <div class="modal-header">
+                <h1 class="modal-title-educacion" id="exampleModalLabel">Información de Educacion</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Escuela?.errors && Escuela?.touched">
+                            <p *ngIf="Escuela?.hasError('required')" class="error">
+                                La Institucion es requerida.
+                            </p>
 
-              <p>
-                  <label for="file">Subir logo de Institución</label>
-                  <input type="file" id="file-logo-educacion">
-              </p>
-              <p>
-                  <label for="textarea">Descripción</label>
-                  <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;"></textarea>
-              </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Nombre</label>
+                        <input type="text" id="input-nombre-educacion" placeholder="Institucion" formControlName="school">
+                    </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Titulo?.errors && Titulo?.touched">
+                            <p *ngIf="Titulo?.hasError('required')" class="error">
+                                El Titulo es requerido.
+                            </p>
+
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Título</label>
+                        <input type="text" id="input-nombre-titulo" placeholder="Titulo " formControlName="title">
+                    </p>
+                     <!-- contenedor para los mensajes aparezcan sobre en dos col -->
+                     <div class="container text-center">
+                        <div class="row">
+
+                            <!-- Gracias al getter que configuramos en el controlador -->
+                            <div class="mensaje-inicio col-7">
+                                <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">
+                                    <p *ngIf="FechaInicio?.hasError('required')" class="error fechainicio">
+                                        El Inicio es requerido.
+                                    </p>
+                                    <p *ngIf="FechaInicio?.errors?.['maxlength']" class="error mascaractinicio">
+                                        Debe tenet 10 caracteres.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Gracias al getter que configuramos en el controlador -->
+                            <div class="mensaje-fin col-5">
+                                <div *ngIf="FchaFin?.errors && FchaFin?.touched">
+                                    <p *ngIf="FchaFin?.hasError('required')" class="error">
+                                        El Fin es requerido.
+                                    </p>
+                                    <p *ngIf="FchaFin?.errors?.['maxlength']" class="error">
+                                        Debe tenet 10 caracteres.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fechas">
+                        <p>
+                            <label for="date">Fecha inicio</label>
+                            <input type="date" id="date-fecha-educacion-inicio" formControlName="dstart">
+                        </p>
+                        <p class="fecha-fin">
+                            <label for="date">Fecha fin</label>
+                            <input type="date" id="date-fecha-educacion-fin" formControlName="dend">
+                        </p>
+                    </div>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Imagen?.errors && Imagen?.touched">
+                            <p *ngIf="Imagen?.hasError('required')" class="error">
+                                La foto es requerida.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>
+                        <label for="file">Subir logo de Institución</label>
+                        <input type="file" id="file-logo-educacion" formControlName="img">
+                    </p>
+
+                     <!-- Gracias al getter que configuramos en el controlador -->
+                     <div class="mensaje">
+                        <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                            <p *ngIf="Descripcion?.hasError('required')" class="error">
+                                La descripcion es requerida.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="textarea">Descripción</label>
+                        <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;" formControlName="description"></textarea>
+                    </p>
 
 
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-      </div>
-  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </div>
 <!-- fin modal para  nueva educacion  -->

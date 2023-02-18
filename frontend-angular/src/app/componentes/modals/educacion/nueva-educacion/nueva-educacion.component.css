@@ -38,13 +38,32 @@
     width: 102rem;
     border-radius: 8px;
 }
-#date-fecha-educacion{
+#date-fecha-educacion-inicio{
     background-color: rgba(207, 207, 222, 0.947);
-    margin-left: 7rem;
+    margin-left: 27rem;
     margin-top: 3rem;
-    width: 102rem;
+    width: 33rem;
     border-radius: 8px;
 }
+#date-fecha-educacion-fin{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 9rem;
+    margin-top: 3rem;
+    width: 33rem;
+    border-radius: 8px;
+}
+.fechas{
+    display: flex;
+}
+.fechainicio{
+    margin-left: 40rem;
+    font-size: 4rem;
+}
+.fecha-fin{
+    margin-left: 5rem;
+   text-align: center;
+}
+
 #file-logo-educacion{
     background-color: rgba(130, 130, 138, 0.642);
     margin-left: 0rem;
@@ -58,4 +77,19 @@
     border-radius: 8px;
     width: 102rem;
     
+}
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 4rem;
+}
+
+.mascaractinicio{
+    margin-left: 30rem;
+}
+.mensaje-fin{
+    font-size: 4rem;
 }

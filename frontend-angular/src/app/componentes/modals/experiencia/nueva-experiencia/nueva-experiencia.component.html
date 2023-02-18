@@ -36,13 +36,14 @@
                         <input type="text" id="input-nombre-puesto-experiencia" placeholder="Puesto"
                             formControlName="position">
                     </p>
+                    <!-- contenedor para los mensajes aparezcan sobre en dos col -->
                     <div class="container text-center">
                         <div class="row">
 
                             <!-- Gracias al getter que configuramos en el controlador -->
                             <div class="mensaje-inicio col-8">
                                 <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">
-                                    <p *ngIf="FechaInicio?.hasError('required')" class="error">
+                                    <p *ngIf="FechaInicio?.hasError('required')" class="error" >
                                         El Inicio es requerido.
                                     </p>
                                     <p *ngIf="FechaInicio?.errors?.['maxlength']" class="error">
@@ -62,8 +63,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
 
                     <div class="fechas">
