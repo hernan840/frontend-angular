@@ -6,49 +6,49 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './editar-sobremi.component.html',
   styleUrls: ['./editar-sobremi.component.css']
 })
-export class EditarSobremiComponent implements OnInit{
+export class EditarSobremiComponent implements OnInit {
   /* se crea una variable forms */
-    forms: FormGroup;
+  forms: FormGroup;
 
-    constructor(private formBuilder: FormBuilder){
-      ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
-      this.forms= this.formBuilder.group({
-        imgPerfilSibreMi:['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
-        about: ['',Validators.required],
-        name: ['',Validators.required]
-      })
-   }
- 
-  ngOnInit() {}
+  constructor(private formBuilder: FormBuilder) {
+    ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
+    this.forms = this.formBuilder.group({
+      imgPerfilSibreMi: ['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
+      about: ['', Validators.required],
+      name: ['', Validators.required]
+    })
+  }
 
-  get ImgSobremi(){
+  ngOnInit() { }
+
+  get ImgSobremi() {
     return this.forms.get("imgPerfilSibreMi");
   }
- 
-  get Sobremi(){
-   return this.forms.get("about");
+
+  get Sobremi() {
+    return this.forms.get("about");
   }
-  get Name(){
+  get Name() {
     return this.forms.get("name");
-   }
-  
+  }
 
 
-   onEnviar(event: Event){
+
+  onEnviar(event: Event) {
     console.log(this.forms) //para ver por consola
     // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault; 
+    event.preventDefault;
 
-  
- 
-    if (this.forms.valid){
+
+
+    if (this.forms.valid) {
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
       alert("Formulario Enviado!")
-      
+
     }
-   
-    
+
+
   }
 
 

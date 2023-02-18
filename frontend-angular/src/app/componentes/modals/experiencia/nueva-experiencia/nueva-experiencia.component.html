@@ -1,50 +1,111 @@
- <!-- Modal nueva experiencia-->
- <div class="modal fade" id="modalNuevaExperiencia" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
- aria-hidden="true">
- <div class="modal-dialog">
-     <div class="modal-content contet-modal-experiencia">
-         <div class="modal-header">
-             <h1 class="modal-title-experiencia" id="exampleModalLabel">Nueva Experiencia Laboral</h1>
-             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                 aria-label="Close"></button>
-         </div>
-         <div class="modal-body">
-             <p>
-                 <label for="input">Nombre del Lugar</label>
-                 <input type="text" id="input-nombre-experiencia" placeholder="Nombre">
-             </p>
-             <p>
-                 <label for="input">Puesto</label>
-                 <input type="text" id="input-nombre-puesto-experiencia" placeholder="Cargo ">
-             </p>
-             <div class="fechas">
-                 <p>
-                     <label for="date">Fecha inicio</label>
-                     <input type="date" id="date-fecha-experiencia-inicio">
-                 </p>
-                 <p class="fecha-fin">
-                    <label for="date">Fecha fin</label>
-                    <input type="date" id="date-fecha-experiencia-fin">
-                </p>
+<!-- Modal nueva experiencia-->
+<div class="modal fade" id="modalNuevaExperiencia" tabindex="-1" data-bs-backdrop="static"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contet-modal-experiencia">
+            <div class="modal-header">
+                <h1 class="modal-title-experiencia" id="exampleModalLabel">Nueva Experiencia Laboral</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Compania?.errors && Compania?.touched">
+                            <p *ngIf="Compania?.hasError('required')" class="error">
+                                La empresa es requerida.
+                            </p>
 
-             </div>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Nombre del Lugar</label>
+                        <input type="text" id="input-nombre-experiencia" placeholder="Nombre" formControlName="company">
+                    </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Posicion?.errors && Posicion?.touched">
+                            <p *ngIf="Posicion?.hasError('required')" class="error">
+                                El puesto es requerido.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Puesto</label>
+                        <input type="text" id="input-nombre-puesto-experiencia" placeholder="Puesto"
+                            formControlName="position">
+                    </p>
+                    <div class="container text-center">
+                        <div class="row">
 
-             <p>
-                 <label for="file">Subir logo</label>
-                 <input type="file" id="file-logo-experiencia">
-             </p>
-             <p>
-                 <label for="textarea">Descripción</label>
-                 <textarea id="textarea-descripcion-experiencia" rows="3" style="height: 110px;"></textarea>
-             </p>
+                            <!-- Gracias al getter que configuramos en el controlador -->
+                            <div class="mensaje-inicio col-8">
+                                <div *ngIf="FechaInicio?.errors && FechaInicio?.touched">
+                                    <p *ngIf="FechaInicio?.hasError('required')" class="error">
+                                        El Inicio es requerido.
+                                    </p>
+                                    <p *ngIf="FechaInicio?.errors?.['maxlength']" class="error">
+                                        Debe tenet 10 caracteres.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Gracias al getter que configuramos en el controlador -->
+                            <div class="mensaje-fin col-4">
+                                <div *ngIf="FchaFin?.errors && FchaFin?.touched">
+                                    <p *ngIf="FchaFin?.hasError('required')" class="error fechfin">
+                                        El Fin es requerido.
+                                    </p>
+                                    <p *ngIf="FchaFin?.errors?.['maxlength']" class="error">
+                                        Debe tenet 10 caracteres.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
 
-         </div>
-         <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-             <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-     </div>
- </div>
+                    </div>
+
+                    <div class="fechas">
+                        <p>
+                            <label for="date">Fecha inicio</label>
+                            <input type="date" id="date-fecha-experiencia-inicio" formControlName="dstart">
+                        </p>
+
+                        <p class="fecha-fin">
+                            <label for="date">Fecha fin</label>
+                            <input type="date" id="date-fecha-experiencia-fin" formControlName="dend">
+                        </p>
+
+                    </div>
+
+                    <p>
+                        <label for="file">Subir logo</label>
+                        <input type="file" id="file-logo-experiencia">
+                    </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                            <p *ngIf="Descripcion?.hasError('required')" class="error">
+                                La descripcion es requerida.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="textarea">Descripción</label>
+                        <textarea id="textarea-descripcion-experiencia" rows="3" style="height: 110px;"
+                            formControlName="description"></textarea>
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
 <!-- fin modal para  nueva experiencia  -->

@@ -1,3 +1,4 @@
+
 .btn{
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.479);
@@ -58,6 +59,7 @@
 .fecha-fin{
     margin-left: 5rem;
 }
+
 #file-logo-experiencia{
     background-color: rgba(130, 130, 138, 0.642);
     margin-left: 16rem;
@@ -73,3 +75,12 @@
     border-radius: 8px;
     width: 102rem;
 }
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 4rem;
+}
+
