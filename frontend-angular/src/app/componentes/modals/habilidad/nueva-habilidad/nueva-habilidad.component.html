@@ -1,5 +1,6 @@
- <!-- Modal nuevhabilidad/skill-->
- <div class="modal fade" id="modalNuevoSkil" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal nuevhabilidad/skill-->
+<div class="modal fade" id="modalNuevoSkil" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content contet-modal-skill">
             <div class="modal-header">
@@ -7,41 +8,60 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
                     <label for="input"> Tipo de Skill</label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                        value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Dura</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Blanda</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Idioma</label>
-                </div>
+                    <div class="form-check form-check-inline ml-20">
+                        <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Dura</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-20">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Blanda</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-20">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option3">
+                        <label class="form-check-label" for="inlineRadio2">Idioma</label>
+                    </div>
 
-              
-                <p>
-                    <label for="input">Nombre Skill</label>
-                    <input type="text" id="input-nombre-skill" placeholder="Skill">
-                </p>
-                <p>
-                    <label for="input">progreso %</label>
-                    <input type="text" id="input-progreso-skill" placeholder="% de Realizacion">
-                </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Name?.errors && Name?.touched">
+                            <p *ngIf="Name?.hasError('required')" class="error">
+                               La habilidad es requerida.
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Nombre Skill</label>
+                        <input type="text" id="input-nombre-skill" placeholder="Skill" formControlName="name">
+                    </p>
+                     <!-- Gracias al getter que configuramos en el controlador -->
+                     <div class="mensaje">
+                        <div *ngIf="Progreso?.errors && Progreso?.touched">
+                            <p *ngIf="Progreso?.hasError('required')" class="error">
+                               El progreso es requerida.
+                            </p>
+                           
+                        </div>
+                    </div>
+                    <p>
+                        <label for="input">Progreso %</label>
+                        <input type="text" id="input-progreso-skill" placeholder=" 0 - 100" formControlName="progress" maxLength="3">
+                    </p>
 
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+
+
         </div>
     </div>
 </div>

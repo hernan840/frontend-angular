@@ -39,3 +39,11 @@
     width: 67rem;
     border-radius: 8px;
 }
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 4rem;
+}
