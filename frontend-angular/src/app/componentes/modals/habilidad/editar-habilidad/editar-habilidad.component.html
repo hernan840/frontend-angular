@@ -26,17 +26,16 @@
                     <div class="mensaje">
                         <div *ngIf="Progreso?.errors && Progreso?.touched">
                             <p *ngIf="Progreso?.hasError('required')" class="error">
-                               El progreso es requerida.
+                                El progreso es requerida.
                             </p>
-                           
+
                         </div>
                     </div>
                     <p>
                         <label for="input">Progreso %</label>
-                        <input type="text" id="input-progreso-skill" placeholder=" 0 - 100" formControlName="progress" maxLength="3">
+                        <input type="text" id="input-progreso-skill" placeholder=" 0 - 100" formControlName="progress"
+                            maxLength="3">
                     </p>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>

@@ -1,21 +1,102 @@
 <!-- Modal login -->
-<div class="modal fade" id="modalLogin" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contet-modal-login">
+            <div class="modal-header">
+                <h1 class="modal-titlel-login" id="exampleModalLabel">Iniciar sesión</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
+                    <form class="form">
+                        <input type="text" required formControlName="email">
+                        <label class="lbl-nombre">
+                            <span class="text-nomb">Usuario</span>
+                        </label>
+                    </form>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Mail?.errors && Mail?.touched">
+                            <p *ngIf="Mail?.hasError('required')" class="error">
+                                El email es requerido.
+                            </p>
+                            <p *ngIf="Mail?.hasError('email')" class="error">
+                                El formato del email debe ser válido.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    
+                    <form class="form">
+                        <input type="password" required formControlName="password">
+                        <label class="lbl-password">
+                            <span class="text-pass">Contraseña</span>
+                        </label>
+                    </form>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="Password?.errors && Password?.touched">
+                            <p *ngIf="Password?.hasError('required')" class="error">
+                                El password es requerido.
+                            </p>
+                            <p *ngIf="Password?.errors?.['minlength']" class="error">
+                                El password debe ser de 8 o más caracteres.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--fin Modal login -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal login -->
+<!-- <div class="modal fade" id="modalLogin" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content contet-modal-login">
+            <div class="modal-header">
+                <h1 class="modal-titlel-login" id="exampleModalLabel">Iniciar sesión</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
             <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
-                <div class="modal-header">
-                    <h1 class="modal-titlel-login" id="exampleModalLabel">Iniciar sesión</h1>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
 
                     <form class="form" >
                         <input type="text"  formControlName="email">
                         <label class="lbl-nombre">
                             <span class="text-nomb">Usuario</span>
-                            <!-- Gracias al getter que configuramos en el controlador -->
+                            Gracias al getter que configuramos en el controlador
                             <div class="mensaje">
                                 <div *ngIf="Mail?.errors && Mail?.touched">
                                     <p *ngIf="Mail?.hasError('required')" class="error">
@@ -25,9 +106,6 @@
                                         El formato del email debe ser válido.
                                     </p>
                                 </div>
-
-                                <br />
-
                             </div>
                         </label>
                     </form>
@@ -35,8 +113,7 @@
                     <form class="form">
                         <input type="password"  formControlName="password" >
                         <label class="lbl-password">
-                            <span class="text-pass">Contraseña</span>
-                            <!-- Gracias al getter que configuramos en el controlador -->
+                            Gracias al getter que configuramos en el controlador
                             <div class="mensaje">
                                 <div *ngIf="Password?.errors && Password?.touched">
                                     <p *ngIf="Password?.hasError('required')" class="error">
@@ -46,13 +123,12 @@
                                         El password debe ser de 8 o más caracteres.
                                     </p>
                                 </div>
-                                <br />
-
                             </div>
+                            <span class="text-pass">Contraseña</span>
                         </label>
                     </form>
                 </div>
-                <div class="modal-footer-login">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Ingresar</button>
                 </div>
@@ -60,5 +136,5 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 <!--fin Modal login -->

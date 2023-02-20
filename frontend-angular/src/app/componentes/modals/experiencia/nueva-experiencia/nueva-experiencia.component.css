@@ -81,6 +81,11 @@
   }
 .mensaje{
     text-align: right;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
-
+.mensaje-inicio {
+    font-size: 3.5rem;
+}
+.mensaje-fin {
+    font-size: 3.5rem;
+}

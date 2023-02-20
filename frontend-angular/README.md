@@ -136,3 +136,4 @@ se creo la seccion de json para ese servicio
 ## reactivos formulario editar y nueva experiencia
 ## reactivos formulario editar y nueva educacion
 ## reactivos formulario editar y nueva habilidad
+## reactivos formulario editar y nuevo proyecto. se ajusto el modal login

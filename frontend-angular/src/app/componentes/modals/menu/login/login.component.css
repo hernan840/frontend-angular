@@ -1,20 +1,14 @@
 
 /* --------- modal login -------- */
-
-
 .contet-modal-login{
     margin-top: 50rem;
     background-color: rgba(27, 21, 32, 0.794);
     background: rgba(11, 11, 11, 0.6);  /* transparente blureado */
     backdrop-filter: blur(8px);
     box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
-    height: 60rem;
+    height: 75rem;
     width: 130rem;
-
-
-    
-
-    
+   
 }
 .btn{
     border-radius: 20px;
@@ -36,13 +30,13 @@
 .modal-header{
     height: 14rem;
 }
-/* .modal-body{
+.modal-body{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-} */
-.modal-footer-login{
+    /* justify-content: center; */
+    height: 40rem;
+}
+.modal-footer{
     height: 14rem;
     text-align: right;
 }
@@ -69,6 +63,7 @@
     border: none;
     outline: 0px;
     font-size: 5rem;
+    margin-left: 5rem;
 }
 .form .lbl-nombre, .form .lbl-password{
     position: absolute;
@@ -79,7 +74,7 @@
     pointer-events: none;
     border-bottom: 1px solid #c7c7c7;
     font-size: 5rem;
-    margin-bottom: ;
+    margin-left: 5rem;
    
 }
 .form .lbl-nombre:after, .form .lbl-password:after{
@@ -135,6 +130,7 @@
     color:#76e805
   }
 .mensaje{
-    text-align: right;
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-left: 5rem;
+
 }
