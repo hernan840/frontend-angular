@@ -9,6 +9,22 @@
     "imgPerfilSibreMi": "/assets/img/perfil_portada.jpg",
     "about": "¡Hola!  Soy Hernan de la provincia de JUJUY-ARGENTINA. Actualmente estoy cursando la carrera de Ingeniería en la Universidad Nacional de Jujuy- UNJU. Mi objetivo profesional es desarrollarme en el campo profesionalmente como Desarrolladora Web Full Stack Jr. Poseo gran habilidad de escuchar y la capacidad de trabajar en equipos colaborativos de los cuales uno al escuchar diferentes perspectivas a un problema, adquiere conocimiento mejorando mis habilidades ante problemas futuros. Me considero responsable, puntual, creativo, con ganas de aprender las tecnologías vigentes del mercado en el desarrollo web que me permita desarrollarme profesionalmente.",
     
+    "redes": [
+        {
+            "icono": "fa-brands fa-facebook-f",
+            "urlRedSocial": "https://www.facebook.com/her.nan.12139"
+        },
+        {
+            "icono": "fa-brands fa-github",
+            "urlRedSocial": "https://github.com/hernan840"
+        },
+        {
+            "icono": "fa-brands fa-linkedin-in",
+            "urlRedSocial": "https://www.facebook.com/her.nan.12139"
+        }
+
+    ], 
+
     "experience": [
         {
             "id": 0,

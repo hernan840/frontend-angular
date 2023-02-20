@@ -1,0 +1,60 @@
+
+ .redes a{
+     color: rgb(247, 243, 243);
+     display: inline-block;
+     text-decoration: none;
+     border: 1px solid rgb(228, 211, 211);
+     border-radius: 100%;
+     width: 42px;
+     height: 42px;
+     line-height: 42px;
+     margin: 40px 5px;
+     font-size: 20px;
+     transition: .3s;
+ 
+     z-index: 100;  /*-------------*/
+ }
+ 
+ .redes a:hover{
+     background-color: #624f4c;
+     transform: scale(1.2);
+ }
+ 
+ /* bootones */
+ .btn{
+     border-radius: 20px;
+     background-color: rgba(0, 0, 0, 0.479);
+     box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+     width: 30rem;
+     font-size:10px;
+     margin-top: 3rem;
+ }
+ .btn:hover{
+     background-color: #a47ed598;
+  }
+ 
+
+ .contenedor-btn-edit-borrar-red{
+     width: 42px;
+     height: 42px;
+     position: absolute;
+     right: px;
+     display: flex;
+ }
+ 
+ .btn-borrar-red{
+     width: 7rem;
+     height: 7rem;
+     position: absolute;
+     margin-left: 9rem;
+     top: -80px;
+     right: -5px;
+ }
+ 
+ .btn-editar-red{
+     width: 7rem;
+     height: 7rem;
+     position: absolute;
+     top: -80px;
+     
+ }

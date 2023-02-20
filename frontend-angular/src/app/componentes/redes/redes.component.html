@@ -1,0 +1,25 @@
+<div class="redes"  >
+    
+    <a href="{{red.urlRedSocial}}" target="_blank" *ngFor="let red of redesLista"v>
+        <i class="{{red.icono}}"></i>
+        <div class="contenedor-btn-edit-borrar-red">
+            <button type="button" class="btn btn-primary btn-editar-red" data-bs-toggle="modal"
+                data-bs-target="#modalEditarRed">
+                <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-borrar-red" data-bs-toggle="modal">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+    </a>
+
+  
+    <a data-bs-toggle="modal" data-bs-target="#modalNuevaRed"><i class="fa-solid fa-plus"></i></a>
+    <a href="#" title="Enviar e-mail">
+        <i class="fa-solid fa-paper-plane"></i>
+        
+    </a>
+
+
+</div>
+

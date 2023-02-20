@@ -28,6 +28,7 @@ import { NuevoProyectoComponent } from './componentes/modals/proyecto/nuevo-proy
 import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-proyecto/editar-proyecto.component';
 import { Pag404Component } from './componentes/pag404/pag404.component';
 import { IndexComponent } from './componentes/index/index.component';
+import { RedesComponent } from './componentes/redes/redes.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { IndexComponent } from './componentes/index/index.component';
     NuevoProyectoComponent,
     EditarProyectoComponent,
     Pag404Component,
-    IndexComponent
+    IndexComponent,
+    RedesComponent
     
   ],
   imports: [

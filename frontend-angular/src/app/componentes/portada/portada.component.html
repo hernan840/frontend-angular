@@ -6,61 +6,9 @@
         </div>
         <h1>{{miPorfolio.name}}</h1>
         <h2>{{miPorfolio.position}}</h2>
-        <div class="redes">
-            <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-                <div class="contenedor-btn-edit-borrar-red">
-                    <button type="button" class="btn btn-primary btn-editar-red" data-bs-toggle="modal"
-                        data-bs-target="#modalEditarRed">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-red" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
 
+        <app-redes></app-redes>
 
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-github"></i>
-                <div class="contenedor-btn-edit-borrar-red">
-                    <button type="button" class="btn btn-primary btn-editar-red" data-bs-toggle="modal"
-                        data-bs-target="#modalEditarRed">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-red" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-envelope"></i>
-                <div class="contenedor-btn-edit-borrar-red">
-                    <button type="button" class="btn btn-primary btn-editar-red" data-bs-toggle="modal"
-                        data-bs-target="#modalEditarRed">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-red" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-                <div class="contenedor-btn-edit-borrar-red">
-                    <button type="button" class="btn btn-primary btn-editar-red" data-bs-toggle="modal"
-                        data-bs-target="#modalEditarRed">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary btn-borrar-red" data-bs-toggle="modal">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-            </a>
-            <a data-bs-toggle="modal" data-bs-target="#modalNuevaRed"><i class="fa-solid fa-plus"></i></a>
-
-
-        </div>
         <button type="button" class="btn btn-primary btn-editar-portada" data-bs-toggle="modal"
             data-bs-target="#modalPortada">
             <i class="fa-solid fa-pencil"></i>
@@ -73,4 +21,4 @@
 <!-- agregar el selector del los modales aqui -->
 <app-info-portada></app-info-portada>
 <app-nueva-red-social></app-nueva-red-social>
-<app-editar-red-social></app-editar-red-social>
+<app-editar-red-social></app-editar-red-social> 
