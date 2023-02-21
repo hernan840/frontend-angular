@@ -13,6 +13,7 @@
  .modal-body .input{
      margin-right: 3rem;
  }
+
  .contet-modal-portada{
      margin-top: 50rem;
      background-color: rgba(27, 21, 32, 0.794);
@@ -23,7 +24,7 @@
      font-size: 15px;
  }
  .modal-title-portada{
-     margin-left: 50rem;
+     margin-left: 80rem;
      color: #fff;
      font-size: 20px;
  }
@@ -78,4 +79,12 @@
     position: absolute;
     top: -80px;
     
+}
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 3.5rem;
 }

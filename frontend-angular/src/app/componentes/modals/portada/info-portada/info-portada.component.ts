@@ -1,10 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-info-portada',
   templateUrl: './info-portada.component.html',
   styleUrls: ['./info-portada.component.css']
 })
-export class InfoPortadaComponent {
+export class InfoPortadaComponent implements OnInit {
+  /* se crea una variable forms */
+  forms: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {
+    ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
+    this.forms = this.formBuilder.group({
+      imgPerfilPortada: ['', Validators.required], 
+      backPortada: ['', Validators.required]
+    })
+  }
+
+  ngOnInit() { }
+
+  get ImgPerfilPortada() {
+    return this.forms.get("imgPerfilPortada");
+  }
+
+  get FondoPortada() {
+    return this.forms.get("backPortada");
+  }
+ 
+
+  onEnviar(event: Event) {
+    console.log(this.forms) //para ver por consola
+    // Detenemos la propagación o ejecución del compotamiento submit de un form
+    event.preventDefault;
+    if (this.forms.valid) {
+      // Llamamos a nuestro servicio para enviar los datos al servidor
+      // También podríamos ejecutar alguna lógica extra
+      alert("Formulario Enviado!")
+    }
+  }
 }
