@@ -1,4 +1,4 @@
-/* --------inicio modal sobre mi---------- */
+/* --------inicio modal enviar email---------- */
 .btn{
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.479);
@@ -55,4 +55,12 @@
     border-radius: 8px;
     width: 102rem;
 }
-/* --------fin modal sobre mi---------- */
+/* --------fin modal enviar email---------- */
+/*---------para form responsivo-------- */
+.error{
+    color:#76e805
+  }
+.mensaje{
+    text-align: right;
+    font-size: 3.5rem;
+}

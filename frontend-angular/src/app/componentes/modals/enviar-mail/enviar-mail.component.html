@@ -8,31 +8,66 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-            <!-- <form [formGroup]="forms" (ngSubmit)="onEnviar($event)"> -->
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
                 <div class="modal-body">
                     <form action="https://formsubmit.co/hernanflores21@gmail.com" method="POST">
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                            <div *ngIf="ConsultaNombre?.errors && ConsultaNombre?.touched">
+                                <p *ngIf="ConsultaNombre?.hasError('required')" class="error">
+                                    El nombre de remitente es obligatorio
+                                </p>
+                            </div>
+                        </div>
                         <p>
                             <label for="Nombre">Ingrese Nombre</label>
-                            <input type="text" name="name" id="input-nombre">
+                            <input type="text" name="name" id="input-nombre" formControlName="consultnombre">
                         </p>
-                       
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                            <div *ngIf="ConsultaMail?.errors && ConsultaMail?.touched">
+                                <p *ngIf="ConsultaMail?.hasError('required')" class="error">
+                                    El email es requerido.
+                                </p>
+                                <p *ngIf="ConsultaMail?.hasError('email')" class="error">
+                                    El formato del email debe ser válido.
+                                </p>
+                            </div>
+                        </div>
                         <p>
                             <label for="email">Correo electronico </label>
-                            <input type="email" name="email" id="imput-mail" >
+                            <input type="email" name="email" id="imput-mail" formControlName="consultemail">
                         </p>
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                            <div *ngIf="ConsultaAsunto?.errors && ConsultaAsunto?.touched">
+                                <p *ngIf="ConsultaAsunto?.hasError('required')" class="error">
+                                    El asunto es obligatorio
+                                </p>
+                            </div>
+                        </div>
                         <p>
                             <label for="subject">Asunto</label>
-                            <input type="text" name="subject" id="imput-asunto" >
+                            <input type="text" name="subject" id="imput-asunto" formControlName="consultasunto">
                         </p>
-                       
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                            <div *ngIf="ConsultaCuepoMensaje?.errors && ConsultaCuepoMensaje?.touched">
+                                <p *ngIf="ConsultaCuepoMensaje?.hasError('required')" class="error">
+                                    El cuerpo del mensaje es obligatorio
+                                </p>
+                            </div>
+                        </div>
+
                         <p>
                             <label for="comments">Consulta</label>
-                            <textarea name="comments" id="textarea-consulta" rows="3"></textarea>
+                            <textarea name="comments" id="textarea-consulta" rows="3"
+                                formControlName="consultdetalle"></textarea>
                         </p>
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                            <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+                            <button type="submit" [disabled]="forms.invalid" value="Enviar" class="btn btn-primary">Enviar</button>
                         </div>
                         <!-- para que vuelva a la pagina incial -->
                         <input type="hidden" name="_next" value="http://localhost:4200/">
@@ -43,7 +78,7 @@
                 </div>
 
 
-            <!-- </form> -->
+            </form>
         </div>
     </div>
 </div>

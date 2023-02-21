@@ -144,3 +144,4 @@ se creo la seccion de json para ese servicio
 ## se aplico formulario reactivo al modal editar info-portada
 ## se aplico formulario reactivo al modal nueva red social
 ## se aplico formulario reactivo al modal editar red social
+## se aplico formulario reactivo al modal de enviar email
