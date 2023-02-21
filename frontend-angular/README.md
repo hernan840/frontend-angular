@@ -141,4 +141,5 @@ se creo la seccion de json para ese servicio
 ## se agrego el componente redes que toma de la bd el icono y url
 ## se creo el modal para enviar consulta a travez de correo electronico
 --------------------------------------------------------------------------
-## se alico formulario reactivo al modal editar portada
+## se aplico formulario reactivo al modal editar info-portada
+## se aplico formulario reactivo al modal nueva red social
