@@ -1,0 +1,58 @@
+/* --------inicio modal sobre mi---------- */
+.btn{
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 5px 2px 1px 2px rgba(0, 0, 255, .2);
+    width: 30rem;
+    font-size:10px;
+    margin-top: 3rem;
+}
+.btn:hover{
+    background-color: #a47ed598;
+ }
+
+.contet-modal-enviarMail{
+    margin-top: 50rem;
+    background-color: rgba(27, 21, 32, 0.794);
+    background: rgba(11, 11, 11, 0.6);  /* transparente blureado */
+    backdrop-filter: blur(8px);
+    box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
+    width: 156rem;
+    font-size: 15px;
+}
+.modal-title-mail{
+    color: #fff;
+    margin-left: 59rem;
+    font-size: 20px;
+}
+#input-nombre{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 12rem;
+    margin-top: 3rem;
+    width: 102rem;
+    border-radius: 8px;
+}
+#imput-mail{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 8rem;
+    margin-top: 3rem;
+    width: 102rem;
+    border-radius: 8px;
+}
+#imput-asunto{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 31rem;
+    margin-top: 3rem;
+    width: 102rem;
+    border-radius: 8px;
+}
+
+
+#textarea-descripcion{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 21rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    width: 102rem;
+}
+/* --------fin modal sobre mi---------- */

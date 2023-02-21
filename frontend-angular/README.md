@@ -139,3 +139,4 @@ se creo la seccion de json para ese servicio
 ## reactivos formulario editar y nuevo proyecto. se ajusto el modal login
 --------------------------------------------------------------------------
 ## se agrego el componente redes que toma de la bd el icono y url
+## se creo el modal para enfiar consulta a travez de correo electronico

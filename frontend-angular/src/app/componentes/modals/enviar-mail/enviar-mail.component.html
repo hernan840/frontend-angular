@@ -1,0 +1,50 @@
+<!-- Modal sobre mi-->
+<div class="modal fade" id="modalEnviarMail" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content contet-modal-enviarMail">
+            <div class="modal-header">
+                <h1 class="modal-title-mail" id="exampleModalLabel">Enviar e-mail</h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <!-- <form [formGroup]="forms" (ngSubmit)="onEnviar($event)"> -->
+                <div class="modal-body">
+                    <form action="https://formsubmit.co/hernanflores21@gmail.com" method="POST">
+                        <p>
+                            <label for="Nombre">Ingrese Nombre</label>
+                            <input type="text" name="name" id="input-nombre">
+                        </p>
+                       
+                        <p>
+                            <label for="email">Correo electronico </label>
+                            <input type="email" name="email" id="imput-mail" >
+                        </p>
+                        <p>
+                            <label for="subject">Asunto</label>
+                            <input type="text" name="subject" id="imput-asunto" >
+                        </p>
+                       
+                        <p>
+                            <label for="comments">Comentario</label>
+                            <textarea name="comments" id="textarea-descripcion" rows="3"></textarea>
+                        </p>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                            <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+                        </div>
+                        <!-- para que vuelva a la pagina incial -->
+                        <input type="hidden" name="_next" value="http://localhost:4200/">
+                        <!-- para no moostrar el captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+
+                    </form>
+                </div>
+
+
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+<!-- fin Modal sobre mi-->

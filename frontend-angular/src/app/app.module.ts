@@ -29,6 +29,7 @@ import { EditarProyectoComponent } from './componentes/modals/proyecto/editar-pr
 import { Pag404Component } from './componentes/pag404/pag404.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { RedesComponent } from './componentes/redes/redes.component';
+import { EnviarMailComponent } from './componentes/modals/enviar-mail/enviar-mail.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { RedesComponent } from './componentes/redes/redes.component';
     EditarProyectoComponent,
     Pag404Component,
     IndexComponent,
-    RedesComponent
+    RedesComponent,
+    EnviarMailComponent
     
   ],
   imports: [
