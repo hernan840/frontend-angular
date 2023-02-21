@@ -7,20 +7,39 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <p>
-                    <label for="url">URL Icono </label>
-                    <input type="url" id="imput-url-icono" placeholder="fontawesome">
-                </p>
-                <p>
-                    <label for="url">URL Red Social</label>
-                    <input type="url" id="imput-url-redsocial" placeholder="https://">
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
+            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body">
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="ImgIcono?.errors && ImgIcono?.touched">
+                            <p *ngIf="ImgIcono?.hasError('required')" class="error">
+                                Icono fontawesome es obligaritio
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="url">Icono </label>
+                        <input type="text" id="imput-url-icono" placeholder="ej. fa-brands fa-facebook-f" formControlName="icono">
+                    </p>
+                    <!-- Gracias al getter que configuramos en el controlador -->
+                    <div class="mensaje">
+                        <div *ngIf="DireccionRedSocial?.errors && DireccionRedSocial?.touched">
+                            <p *ngIf="DireccionRedSocial?.hasError('required')" class="error">
+                                La URL es obligatoria
+                            </p>
+                        </div>
+                    </div>
+                    <p>
+                        <label for="url">URL Red Social</label>
+                        <input type="url" id="imput-url-redsocial" placeholder="https://" formControlName="urlRedSocial">
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Guardar</button>
+                </div>
+            
+            </form> 
         </div>
     </div>
 </div>
