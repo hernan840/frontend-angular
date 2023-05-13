@@ -6,9 +6,9 @@
          <div class="modal-header">
              <h1 class="modal-title-proyecto" id="exampleModalLabel">Nuevo Proyecto</h1>
              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                 aria-label="Close"></button>
+                 aria-label="Close" (click)="limpiar()"></button>
          </div>
-         <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+         <form [formGroup]="forms" (ngSubmit)="forms.valid && onCreate($event)">
              <div class="modal-body">
                  <!-- Gracias al getter que configuramos en el controlador -->
                  <div class="mensaje">
@@ -20,7 +20,7 @@
                 </div>
                  <p>
                      <label for="file">Subir Foto de Proyecto</label>
-                     <input type="file" id="file-foto-proyecto" formControlName="img">
+                     <input type="file" id="file-foto-proyecto" formControlName="img" [(ngModel)] ="img">
                  </p>
                  <!-- Gracias al getter que configuramos en el controlador -->
                  <div class="mensaje">
@@ -32,7 +32,7 @@
                 </div>
                  <p>
                      <label for="input">Nombre de Proyecto</label>
-                     <input type="text" id="input-nombre-proyecto" placeholder="Proyecto" formControlName="nameProyec">
+                     <input type="text" id="input-nombre-proyecto" placeholder="Proyecto" formControlName="nameProyec" [(ngModel)] ="nameProyec">
                  </p>
                  <!-- Gracias al getter que configuramos en el controlador -->
                  <div class="mensaje">
@@ -44,7 +44,7 @@
                 </div>
                  <p>
                      <label for="date">Fecha de Relizacion</label>
-                     <input type="date" id="date-fecha-proyecto" formControlName="dend">
+                     <input type="date" id="date-fecha-proyecto" formControlName="endDate" [(ngModel)] ="endDate">
                  </p>
                   <!-- Gracias al getter que configuramos en el controlador -->
                   <div class="mensaje">
@@ -57,7 +57,7 @@
     
                  <p>
                      <label for="textarea">Descricion de Proyecto</label>
-                     <textarea id="textarea-descripcion-proyecto" rows="3" style="height: 110px;" formControlName="description"></textarea>
+                     <textarea id="textarea-descripcion-proyecto" rows="3" style="height: 110px;" formControlName="description"  [(ngModel)] ="description"></textarea>
                  </p>
                  <!-- Gracias al getter que configuramos en el controlador -->
                  <div class="mensaje">
@@ -69,14 +69,15 @@
                 </div>
                  <p>
                      <label for="url">URL del Proyecto</label>
-                     <input type="url" id="url-proyecto" placeholder="http://" formControlName="urlProyect">
+                     <input type="url" id="url-proyecto" placeholder="http://" formControlName="urlProyect" [(ngModel)] ="urlProyect">
                  </p>
     
     
              </div>
              <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                 <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Guardar</button>
+                 <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary" >Guardar</button>
+                 
              </div>
          </form>
      </div>
