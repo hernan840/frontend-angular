@@ -10,11 +10,11 @@
 
         </div>
         <div class="box-container-card">
-            <div class="card" *ngFor="let proyecto of proyectoLista">
+            <div class="card" *ngFor="let proyecto of proyectos">
                 <img [src]="proyecto.img" class="card-img-top" alt="...">
                 <div class="contenido-card">
                     <h3>{{proyecto.nameProyect}}</h3>
-                    <h4>{{proyecto.end}}</h4>
+                    <h4>{{proyecto.endDate | date: "yyyy" }}</h4>
                     <p>{{proyecto.description}}</p>
 
                     <a href="#" class="btn">Ver proyecto</a>

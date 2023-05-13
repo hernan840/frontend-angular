@@ -28,7 +28,7 @@
      place-items: center;
  }
  .experiencias .contenido-experiencias h1{
-    font-size: 9rem;
+    font-size:  3vw;
     text-decoration: underline overline #FF3028;
  
  }
@@ -83,7 +83,7 @@
     padding:.5rem 2.5rem;
  }
  .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia h2{
-    font-size: 7rem;
+    font-size: 1.6vw;
     color:#fff;
     padding-top: 1.5rem;
     text-transform: none;
@@ -91,7 +91,7 @@
  }
  
  .experiencias .contenido-experiencias .box-container-experiencias .box-experiencia p{
-    font-size: 4rem;
+    font-size: 1.2vw;
     color:#eee;
     padding: 1rem 0;
     text-transform: none;

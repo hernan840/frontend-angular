@@ -29,7 +29,7 @@
 }
 
 .educacion .contenido-educacion h1{
-   font-size: 9rem;
+   font-size: 3vw;
    text-decoration: underline overline #FF3028;
 }
 .educacion .contenido-educacion .box-container-educacion {
@@ -69,14 +69,14 @@
    height: auto;
 }
 .educacion .contenido-educacion .box-container-educacion .box span{
-   font-size: 10rem;
+   font-size: 2.5vw;
    /* background:#222; */
    color:#fff;
    /* border-radius: 5rem; */
    padding:.5rem 2.5rem;
 }
 .educacion .contenido-educacion .box-container-educacion .box h3{
-   font-size: 7rem;
+   font-size: 1.7vw;
    color:#fff;
    padding-top: 1.5rem;
    text-transform: none;
@@ -84,7 +84,7 @@
 
 }
 .educacion .contenido-educacion .box-container-educacion .box h2{
-   font-size: 5rem;
+   font-size: 1.3vw;
    color:#fff;
    padding-top: 1.5rem;
    text-transform: none;
@@ -93,7 +93,7 @@
 
 }
 .educacion .contenido-educacion .box-container-educacion .box p{
-   font-size: 4rem;
+   font-size: 1vw;
    color:#eee;
    padding: 1rem 0;
    padding-top: 9rem;

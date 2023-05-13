@@ -153,16 +153,16 @@
             "end": "2023"
         },
         {
-            "nameProyect": "Porfolio - Backend",
-            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
-            "img": "/assets/img/portafolio.PNG",
-            "end": "2023"
+            "nameProyect": "Simulacion Biblioteca",
+            "description": "Es un proyecto donde se simula la concurrenca en una biblioteca. Donde se espera ser atendido por dos bibliotecarios",
+            "img": "/assets/img/simulacionBiblioteca.PNG",
+            "end": "2018"
         },
         {
-            "nameProyect": "Porfolio - Backend",
-            "description": "Diseño de portafolio, creado con el fin de aprender el Maquetado dinamico del porfolio - Bakend",
-            "img": "/assets/img/portafolio.PNG",
-            "end": "2023"
+            "nameProyect": "Asistende de seleccion de auto",
+            "description": "Elemplo practico donde a travez del conocimiento de un experto se recomienda un tipo de auto a los clientes",
+            "img": "/assets/img/AsistenteAuto.PNG",
+            "end": "2019"
         }
     ]
 }
