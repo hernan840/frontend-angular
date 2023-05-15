@@ -1,14 +1,16 @@
   <!-- Modal editar educacion-->
-  <div class="modal fade" id="modalEducacion" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div>
     <div class="modal-dialog">
         <div class="modal-content contet-modal-educacion">
             <div class="modal-header">
                 <h1 class="modal-title-educacion" id="exampleModalLabel">Editar de Educacion</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                <button type="button" class="btn-close btn-close-white" routerLink="/"
                     aria-label="Close"></button>
             </div>
-            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="forms" (ngSubmit)="onUpdate($event)">
                 <div class="modal-body">
+                    <!-- Campo: Id(oculto) -->
+                    <input type="text" id="proyecto" class="form-control-id" formControlName="id" [ngModel]="educ.id"> 
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
                         <div *ngIf="Escuela?.errors && Escuela?.touched">
@@ -20,7 +22,7 @@
                     </div>
                     <p>
                         <label for="input">Nombre</label>
-                        <input type="text" id="input-nombre-educacion" placeholder="Institucion" formControlName="school">
+                        <input type="text" id="input-nombre-educacion" placeholder="Institucion" formControlName="school" [ngModel]="educ.school">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -33,7 +35,7 @@
                     </div>
                     <p>
                         <label for="input">Título</label>
-                        <input type="text" id="input-nombre-titulo" placeholder="Titulo " formControlName="title">
+                        <input type="text" id="input-nombre-titulo" placeholder="Titulo " formControlName="title" [ngModel]="educ.title">
                     </p>
                      <!-- contenedor para los mensajes aparezcan sobre en dos col -->
                      <div class="container text-center">
@@ -66,11 +68,11 @@
                     <div class="fechas">
                         <p>
                             <label for="date">Fecha inicio</label>
-                            <input type="date" id="date-fecha-educacion-inicio" formControlName="dstart">
+                            <input type="date" id="date-fecha-educacion-inicio" formControlName="startDate" [ngModel]="educ.startDate">
                         </p>
                         <p class="fecha-fin">
                             <label for="date">Fecha fin</label>
-                            <input type="date" id="date-fecha-educacion-fin" formControlName="dend">
+                            <input type="date" id="date-fecha-educacion-fin" formControlName="endDate" [ngModel]="educ.endDate">
                         </p>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
@@ -84,7 +86,7 @@
 
                     <p>
                         <label for="file">Subir logo de Institución</label>
-                        <input type="file" id="file-logo-educacion" formControlName="img">
+                        <input type="file" id="file-logo-educacion" formControlName="img" [ngModel]="educ.img">
                     </p>
 
                      <!-- Gracias al getter que configuramos en el controlador -->
@@ -97,13 +99,13 @@
                     </div>
                     <p>
                         <label for="textarea">Descripción</label>
-                        <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;" formControlName="description"></textarea>
+                        <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;" formControlName="description"[ngModel]="educ.description"></textarea>
                     </p>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="button" class="btn btn-secondary" routerLink="/">Canselar</button>
                     <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Guardar</button>
                 </div>
             </form>

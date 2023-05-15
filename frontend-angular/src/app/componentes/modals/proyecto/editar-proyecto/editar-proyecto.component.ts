@@ -67,7 +67,7 @@ onUpdate(event:Event): void{
   
   console.log(this.forms.value);
   this.proyectoService.update(this.forms.value).subscribe(data=>{
-    alert("Habilidad modificada!!!!");
+    alert("Proyecto modificado!!!!");
     this.router.navigate(['']);
   }, err => {
     this.forms.markAllAsTouched();

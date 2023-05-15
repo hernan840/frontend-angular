@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Educacion } from 'src/app/modelos/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
   selector: 'app-editar-educacion',
@@ -9,20 +12,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EditarEducacionComponent implements OnInit {
   /* se crea una variable forms */
   forms: FormGroup;
+  educ :Educacion = new Educacion('','','','','','');
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private educacionService:EducacionService,
+              private activatedRoute:ActivatedRoute,
+              private router:Router) {
+
     ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
     this.forms = this.formBuilder.group({
+      id:[''],
       school: ['', Validators.required], 
       title: ['', Validators.required],
       description: ['', Validators.required],
       img: ['', Validators.required],
-      dstart: ['', [Validators.required, Validators.maxLength(10)]],
-      dend: ['', [Validators.required, Validators.maxLength(10)]]
+      startDate: ['', [Validators.required, Validators.maxLength(10)]],
+      endDate: ['', [Validators.required, Validators.maxLength(10)]]
     })
   }
-
-  ngOnInit() { }
 
   get Escuela() {
     return this.forms.get("school");
@@ -38,23 +45,35 @@ export class EditarEducacionComponent implements OnInit {
     return this.forms.get("img");
   }
   get FechaInicio() {
-    return this.forms.get("dstart");
+    return this.forms.get("startDate");
   }
   get FchaFin() {
-    return this.forms.get("dend");
+    return this.forms.get("endDate");
   }
 
 
-
-  onEnviar(event: Event) {
-    console.log(this.forms) //para ver por consola
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault;
-    if (this.forms.valid) {
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Formulario Enviado!")
+  ngOnInit(): void {
+    // inicie con los datos cargados en el formulario
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.educacionService.detail(id).subscribe(data => {
+      this.educ=data;
     }
+    )
   }
+  
+  onUpdate(event:Event): void{
+    event.preventDefault;
+    
+    // console.log(this.forms.value);
+    this.educacionService.update(this.forms.value).subscribe(data=>{
+      alert("Educacion modificada!!!!");
+      this.router.navigate(['']);
+    }, err => {
+      this.forms.markAllAsTouched();
+      alert("Falló la modificación de la proyecto!");
+  
+    })
 
 }
+}
+
