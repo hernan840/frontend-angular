@@ -6,7 +6,7 @@
 body{
     /* background-color: #da2e2e; */
     overflow-x: hidden;
-    padding-left: 35rem;
+    /* padding-left: 0rem; */
     /* background-size: cover; */
 }
 
@@ -39,7 +39,7 @@ html::-webkit-scrollbar-thumb{
     background:var(--yellow);
 }
 #particles-js{
-    width: 100%;
+    width: 200%;
     height: 100vh;
     background: black;
     position: fixed;

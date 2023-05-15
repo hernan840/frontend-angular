@@ -1,82 +1,90 @@
-<div class="modal fade" id="modalProyecto" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content contet-modal-proyecto">
-            <div class="modal-header">
-                <h1 class="modal-title-proyecto" id="exampleModalLabel">Editar Proyecto</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+<!-- <div class="modal fade" id="modalProyecto" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+
+    <div >
+
+        <div class="modal-dialog">
+            <div class="modal-content contet-modal-proyecto">
+                <div class="modal-header">
+                    <h1 class="modal-title-proyecto" id="exampleModalLabel">Editar Proyecto</h1>
+                    <button type="button" class="btn-close btn-close-white" routerLink="/"
+                        aria-label="Close"  ></button>
+                </div>
+                < <form [formGroup]="forms" (ngSubmit)="onUpdate($event)">
+                    <div class="modal-body">
+                         <!-- Campo: Id(oculto) -->
+                        <input type="text" id="proyecto" class="form-control-id" formControlName="id" [ngModel]="proye.id"> 
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                           <div *ngIf="ImgProyect?.errors && ImgProyect?.touched">
+                               <p *ngIf="ImgProyect?.hasError('required')" class="error">
+                                   La foto es requerido.
+                               </p>
+                           </div>
+                       </div>
+                        <p>
+                            <label for="file">Subir Foto de Proyecto</label>
+                            <input type="file" id="file-foto-proyecto" formControlName="img" [ngModel]="proye.img">
+                        </p>
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                           <div *ngIf="NombreProyecto?.errors && NombreProyecto?.touched">
+                               <p *ngIf="NombreProyecto?.hasError('required')" class="error">
+                                   EL nombre es requerido.
+                               </p>
+                           </div>
+                       </div>
+                        <p>
+                            <label for="input">Nombre de Proyecto</label>
+                            <input type="text" id="input-nombre-proyecto" placeholder="Proyecto" formControlName="nameProyect" [ngModel]="proye.nameProyect">
+                        </p>
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                           <div *ngIf="FchaFin?.errors && FchaFin?.touched">
+                               <p *ngIf="FchaFin?.hasError('required')" class="error">
+                                   La Fecha es requerida.
+                               </p>
+                           </div>
+                       </div>
+                        <p>
+                            <label for="date">Fecha de Relizacion</label>
+                            <input type="date" id="date-fecha-proyecto" formControlName="endDate" [ngModel]="proye.endDate" >
+                        </p>
+                         <!-- Gracias al getter que configuramos en el controlador -->
+                         <div class="mensaje">
+                           <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                               <p *ngIf="Descripcion?.hasError('required')" class="error">
+                                   La descripcion es requerida.
+                               </p>
+                           </div>
+                       </div>
+                        <p>
+                            <label for="textarea">Descricion de Proyecto</label>
+                            <textarea id="textarea-descripcion-proyecto" rows="3" style="height: 110px;" formControlName="description" [ngModel]="proye.description" ></textarea>
+                        </p>
+                        <!-- Gracias al getter que configuramos en el controlador -->
+                        <div class="mensaje">
+                           <div *ngIf="UrlProyect?.errors && UrlProyect?.touched">
+                               <p *ngIf="UrlProyect?.hasError('required')" class="error">
+                                   URL GIT es requerida.
+                               </p>
+                           </div>
+                       </div>
+                        <p>
+                            <label for="url">URL del Proyecto</label>
+                            <input type="url" id="url-proyecto" placeholder="http://" formControlName="urlProyect" [ngModel]="proye.urlProyect">
+                        </p>
+           
+           
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" routerLink="/">Canselar</button>
+                        <button type="submit" class="btn btn-primary" >Guardar</button>
+                    </div>
+                </form>
             </div>
-            < <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
-                <div class="modal-body">
-                    <!-- Gracias al getter que configuramos en el controlador -->
-                    <div class="mensaje">
-                       <div *ngIf="ImgProyect?.errors && ImgProyect?.touched">
-                           <p *ngIf="ImgProyect?.hasError('required')" class="error">
-                               La foto es requerido.
-                           </p>
-                       </div>
-                   </div>
-                    <p>
-                        <label for="file">Subir Foto de Proyecto</label>
-                        <input type="file" id="file-foto-proyecto" formControlName="img">
-                    </p>
-                    <!-- Gracias al getter que configuramos en el controlador -->
-                    <div class="mensaje">
-                       <div *ngIf="NombreProyecto?.errors && NombreProyecto?.touched">
-                           <p *ngIf="NombreProyecto?.hasError('required')" class="error">
-                               EL nombre es requerido.
-                           </p>
-                       </div>
-                   </div>
-                    <p>
-                        <label for="input">Nombre de Proyecto</label>
-                        <input type="text" id="input-nombre-proyecto" placeholder="Proyecto" formControlName="nameProyec">
-                    </p>
-                    <!-- Gracias al getter que configuramos en el controlador -->
-                    <div class="mensaje">
-                       <div *ngIf="FchaFin?.errors && FchaFin?.touched">
-                           <p *ngIf="FchaFin?.hasError('required')" class="error">
-                               La Fecha es requerida.
-                           </p>
-                       </div>
-                   </div>
-                    <p>
-                        <label for="date">Fecha de Relizacion</label>
-                        <input type="date" id="date-fecha-proyecto" formControlName="dend">
-                    </p>
-                     <!-- Gracias al getter que configuramos en el controlador -->
-                     <div class="mensaje">
-                       <div *ngIf="Descripcion?.errors && Descripcion?.touched">
-                           <p *ngIf="Descripcion?.hasError('required')" class="error">
-                               La descripcion es requerida.
-                           </p>
-                       </div>
-                   </div>
-       
-                    <p>
-                        <label for="textarea">Descricion de Proyecto</label>
-                        <textarea id="textarea-descripcion-proyecto" rows="3" style="height: 110px;" formControlName="description"></textarea>
-                    </p>
-                    <!-- Gracias al getter que configuramos en el controlador -->
-                    <div class="mensaje">
-                       <div *ngIf="UrlProyect?.errors && UrlProyect?.touched">
-                           <p *ngIf="UrlProyect?.hasError('required')" class="error">
-                               URL GIT es requerida.
-                           </p>
-                       </div>
-                   </div>
-                    <p>
-                        <label for="url">URL del Proyecto</label>
-                        <input type="url" id="url-proyecto" placeholder="http://" formControlName="urlProyect">
-                    </p>
-       
-       
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
-                    <button type="submit" [disabled] ="forms.invalid" class="btn btn-primary">Guardar</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
+<!-- </div> -->
+
+
+ 

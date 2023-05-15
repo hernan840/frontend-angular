@@ -17,14 +17,15 @@
                     <h4>{{proyecto.endDate | date: "yyyy" }}</h4>
                     <p>{{proyecto.description}}</p>
 
-                    <a href="#" class="btn">Ver proyecto</a>
+                    <a href="{{proyecto.urlProyect}}" target="_blank" class="btn" >Ver proyecto</a>
                 </div>
                 <div class="contenedor-btn-edit-borrar-proyecto">
-                    <button type="button" class="btn btn-primary btn-editar-proyecto" data-bs-toggle="modal"
-                        data-bs-target="#modalProyecto">
-                        <i class="fa-solid fa-pencil"></i>
+                    <button type="submit"  class="btn btn-primary btn-editar-proyecto" data-bs-toggle="modal"
+                        data-bs-target="#modalProyecto" routerLink="editProyecto/{{proyecto.id}}">
+                       
+                        <i class="fa-solid fa-pencil" ></i>
                     </button>
-                    <button type="button" class="btn btn-primary btn-borrar-proyecto" data-bs-toggle="modal">
+                    <button type="submit" class="btn btn-primary btn-borrar-proyecto" >
                         <i class="fa-solid fa-trash" (click)="borrar(proyecto.id)"></i>
                     </button>
                 </div>
@@ -43,4 +44,4 @@
 
 <!-- agregar el selector del los modales aqui -->
 <app-nuevo-proyecto></app-nuevo-proyecto>
-<app-editar-proyecto></app-editar-proyecto>
+<!-- <app-editar-proyecto></app-editar-proyecto> -->

@@ -11,11 +11,9 @@
 }
 .sobre_mi .contenido-sobremi{
     padding: 20px;
-    /* background-color: #0c1215; */
-    /* max-width: 80rem; */
-    width: 90%;
-    height: 80%;
-    margin: auto;
+    width: 340rem;
+    margin-left: 50rem;
+    height: 90%;
     text-align: center;
     border-radius: 40px;
     background: rgba(74, 70, 70, 0.447);  /* transparente blureado */

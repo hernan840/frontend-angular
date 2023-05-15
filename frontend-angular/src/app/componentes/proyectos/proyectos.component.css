@@ -8,10 +8,10 @@
  .proyectos .contenido-proyectos{
     
     padding: 20px;
-    width: 90%;
-    height: 85%;
+    width: 340rem;
+    height: 90%;
     bottom: 20px;
-    margin: auto;
+    margin-left: 50rem;
     text-align: center;
     border-radius: 40px;
     background: rgba(74, 70, 70, 0.447);  /* transparente blureado */

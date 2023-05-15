@@ -8,9 +8,9 @@
 }
 .habilidades .contenido-habilidades{
    padding: 20px;
-   width: 90%;
-   height: 80%;
-   margin: auto;
+   width: 340rem;
+   margin-left: 50rem;
+   height: 90%;
    text-align: center;
    border-radius: 40px;
    background: rgba(74, 70, 70, 0.447);  /* transparente blureado */

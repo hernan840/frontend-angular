@@ -14,8 +14,8 @@ export class NuevoProyectoComponent  implements OnInit{
   nameProyec = ''; 
   description = '';
   img = '';
-  urlProyect = '';
   endDate = '';  
+  urlProyect = '';
 
   constructor(private formBuilder: FormBuilder, private proyectoService:ProyectoService){
     ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
@@ -23,8 +23,8 @@ export class NuevoProyectoComponent  implements OnInit{
       nameProyec:['', Validators.required], 
       description: ['',Validators.required],
       img: ['',Validators.required],
+      endDate: ['',Validators.required],
       urlProyect: ['',Validators.required], 
-      endDate: ['',Validators.required]
     })
  }
 
@@ -42,11 +42,11 @@ get Descripcion() {
 get ImgProyect() {
   return this.forms.get("img");
 }
-get UrlProyect() {
-  return this.forms.get("urlProyect");
-}
 get FchaFin() {
   return this.forms.get("endDate");
+}
+get UrlProyect() {
+  return this.forms.get("urlProyect");
 }
 
  //Validaciones
@@ -63,29 +63,17 @@ get FchaFin() {
  {
    return this.ImgProyect?.touched && !this.ImgProyect.valid;
  } 
- get UrlProyectValid()
- {
-   return this.UrlProyect?.touched && !this.UrlProyect.valid;
- } 
  get FchaFinValid()
  {
    return this.FchaFin?.touched && !this.FchaFin.valid;
- } 
-
-/* onEnviar(event: Event) {
-  console.log(this.forms) //para ver por consola
-  // Detenemos la propagación o ejecución del compotamiento submit de un form
-  event.preventDefault;
-
-  if (this.forms.valid) {
-    // Llamamos a nuestro servicio para enviar los datos al servidor
-    // También podríamos ejecutar alguna lógica extra
-    alert("Formulario Enviado!")
-  }
-} */
+  } 
+  get UrlProyectValid()
+  {
+    return this.UrlProyect?.touched && !this.UrlProyect.valid;
+  } 
 
 onCreate(event:Event): void{
-  const proy = new Proyecto(this.nameProyec,this.description,this.img,this.endDate);
+  const proy = new Proyecto(this.nameProyec,this.description,this.img,this.endDate,this.urlProyect);
   this.proyectoService.save(proy).subscribe(data=>{
     // alert("Habilidad añadida!");
     window.location.reload();

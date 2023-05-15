@@ -10,12 +10,15 @@ import { ProyectoService } from 'src/app/servicios/proyecto.service';
 })
 export class ProyectosComponent implements OnInit{
 
+  enviarId: any;
+
   //Variable para usarla(enlazarla) al template(en el html de la vista)
   proyectos: any[]=[];
   constructor(private proyectoService : ProyectoService) { }
 
   ngOnInit(): void {
     this.cargarProyectos();
+   
   }
 
   cargarProyectos():void{
@@ -35,4 +38,6 @@ export class ProyectosComponent implements OnInit{
           window.location.reload();
         })
     }}
+
+
 }
