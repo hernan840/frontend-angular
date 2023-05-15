@@ -6,9 +6,9 @@
             <div class="modal-header">
                 <h1 class="modal-title-educacion" id="exampleModalLabel">Información de Educacion</h1>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                    aria-label="Close" (click)="limpiar()"></button>
             </div>
-            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="forms" (ngSubmit)="forms.valid && onCreate($event)">
                 <div class="modal-body">
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -21,7 +21,7 @@
                     </div>
                     <p>
                         <label for="input">Nombre</label>
-                        <input type="text" id="input-nombre-educacion" placeholder="Institucion" formControlName="school">
+                        <input type="text" id="input-nombre-educacion" placeholder="Institucion" formControlName="school" [(ngModel)] ="school">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -34,7 +34,7 @@
                     </div>
                     <p>
                         <label for="input">Título</label>
-                        <input type="text" id="input-nombre-titulo" placeholder="Titulo " formControlName="title">
+                        <input type="text" id="input-nombre-titulo" placeholder="Titulo " formControlName="title" [(ngModel)] ="title" >
                     </p>
                      <!-- contenedor para los mensajes aparezcan sobre en dos col -->
                      <div class="container text-center">
@@ -67,11 +67,11 @@
                     <div class="fechas">
                         <p>
                             <label for="date">Fecha inicio</label>
-                            <input type="date" id="date-fecha-educacion-inicio" formControlName="dstart">
+                            <input type="date" id="date-fecha-educacion-inicio" formControlName="dstart" [(ngModel)] ="startDate">
                         </p>
                         <p class="fecha-fin">
                             <label for="date">Fecha fin</label>
-                            <input type="date" id="date-fecha-educacion-fin" formControlName="dend">
+                            <input type="date" id="date-fecha-educacion-fin" formControlName="dend" [(ngModel)] ="endDate">
                         </p>
                     </div>
                     <!-- Gracias al getter que configuramos en el controlador -->
@@ -98,7 +98,7 @@
                     </div>
                     <p>
                         <label for="textarea">Descripción</label>
-                        <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;" formControlName="description"></textarea>
+                        <textarea id="textarea-descripcion-educacion" rows="3" style="height: 110px;" formControlName="description" [(ngModel)] ="description"></textarea>
                     </p>
 
 

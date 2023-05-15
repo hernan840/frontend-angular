@@ -28,9 +28,8 @@ export class NuevoProyectoComponent  implements OnInit{
     })
  }
 
-ngOnInit() {}
-
-
+ 
+ 
 // declarar para las validaciones
 get NombreProyecto() {
   return this.forms.get("nameProyec");
@@ -71,6 +70,8 @@ get UrlProyect() {
   {
     return this.UrlProyect?.touched && !this.UrlProyect.valid;
   } 
+  
+ ngOnInit() {}
 
 onCreate(event:Event): void{
   const proy = new Proyecto(this.nameProyec,this.description,this.img,this.endDate,this.urlProyect);
