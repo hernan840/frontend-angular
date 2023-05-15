@@ -9,13 +9,13 @@
             </button>
 
         </div>
-        <div class="box-container-experiencias" *ngFor="let experiencia of experienciaLista">
+        <div class="box-container-experiencias" *ngFor="let experiencia of experiencias">
           
                     <div class="box-experiencia">
                         <img [src]="experiencia.img" alt="">
                         <h2>{{experiencia.company}}</h2>
                         <h2>{{experiencia.position}}</h2>
-                        <span> {{experiencia.start}} - {{experiencia.end}}</span>
+                        <span> {{experiencia.startDate | date: "yyyy"}} - {{experiencia.endDate | date: "yyyy"}}</span>
                         <p>{{experiencia.description}}</p>
         
                         <div class="contenedor-btn-edit-borrar-experiencia">
