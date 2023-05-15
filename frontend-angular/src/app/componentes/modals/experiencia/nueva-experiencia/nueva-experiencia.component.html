@@ -6,9 +6,9 @@
             <div class="modal-header">
                 <h1 class="modal-title-experiencia" id="exampleModalLabel">Nueva Experiencia Laboral</h1>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                    aria-label="Close" (click)="limpiar()"></button>
             </div>
-            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="forms" (ngSubmit)="forms.valid && onCreate($event)">
                 <div class="modal-body">
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -21,7 +21,7 @@
                     </div>
                     <p>
                         <label for="input">Nombre del Lugar</label>
-                        <input type="text" id="input-nombre-experiencia" placeholder="Nombre" formControlName="company">
+                        <input type="text" id="input-nombre-experiencia" placeholder="Nombre" formControlName="company" [(ngModel)] ="company">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -34,7 +34,7 @@
                     <p>
                         <label for="input">Puesto</label>
                         <input type="text" id="input-nombre-puesto-experiencia" placeholder="Puesto"
-                            formControlName="position">
+                            formControlName="position" [(ngModel)] ="position">
                     </p>
                     <!-- contenedor para los mensajes aparezcan sobre en dos col -->
                     <div class="container text-center">
@@ -68,12 +68,12 @@
                     <div class="fechas">
                         <p>
                             <label for="date">Fecha inicio</label>
-                            <input type="date" id="date-fecha-experiencia-inicio" formControlName="dstart">
+                            <input type="date" id="date-fecha-experiencia-inicio" formControlName="startDate" [(ngModel)] ="startDate">
                         </p>
 
                         <p class="fecha-fin">
                             <label for="date">Fecha fin</label>
-                            <input type="date" id="date-fecha-experiencia-fin" formControlName="dend">
+                            <input type="date" id="date-fecha-experiencia-fin" formControlName="endDate" [(ngModel)] ="endDate">
                         </p>
 
                     </div>
@@ -93,7 +93,7 @@
                     <p>
                         <label for="textarea">Descripción</label>
                         <textarea id="textarea-descripcion-experiencia" rows="3" style="height: 110px;"
-                            formControlName="description"></textarea>
+                            formControlName="description" [(ngModel)] ="description"></textarea>
                     </p>
 
 

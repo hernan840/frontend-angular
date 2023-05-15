@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Experiencia } from 'src/app/modelos/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
   selector: 'app-nueva-experiencia',
@@ -10,18 +12,24 @@ export class NuevaExperienciaComponent implements OnInit{
     /* se crea una variable forms */
     forms: FormGroup;
 
-    constructor(private formBuilder: FormBuilder){
+    company = ''; 
+    position = '';
+    description = '';
+    img = '';  
+    startDate = '';
+    endDate = '';
+
+    constructor(private formBuilder: FormBuilder, private experienciaService:ExperienciaService){
       ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
       this.forms= this.formBuilder.group({
         company:['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
         position: ['',Validators.required],
         description: ['',Validators.required],
-        dstart: ['',[Validators.required, Validators.maxLength(10)]],
-        dend: ['',[Validators.required, Validators.maxLength(10)]]
+        startDate: ['',[Validators.required, Validators.maxLength(10)]],
+        endDate: ['',[Validators.required, Validators.maxLength(10)]]
       })
    }
  
-  ngOnInit() {}
   
   get Compania() {
     return this.forms.get("company");
@@ -34,28 +42,31 @@ export class NuevaExperienciaComponent implements OnInit{
     return this.forms.get("description");
   }
   get FechaInicio() {
-    return this.forms.get("dstart");
+    return this.forms.get("startDate");
   }
   get FchaFin() {
-    return this.forms.get("dend");
+    return this.forms.get("endDate");
   }
 
 
+  ngOnInit() {}
 
-  onEnviar(event: Event) {
-    console.log(this.forms) //para ver por consola
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault;
-
-
-
-    if (this.forms.valid) {
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Formulario Enviado!")
-
-    }
-
-
+  onCreate(event:Event): void{
+    const exp = new Experiencia(this.company,this.position,this.description,this.img,this.startDate,this.endDate);
+    this.experienciaService.save(exp).subscribe(data=>{
+      // alert("Habilidad añadida!");
+      window.location.reload();
+      
+      
+    }, err => {
+      alert("Falló la carga. intente nuevamente");
+        this.forms.reset();
+    })
   }
-}
+  
+  limpiar(): void{
+    this.forms.reset();
+  }  
+  
+  }
+  
