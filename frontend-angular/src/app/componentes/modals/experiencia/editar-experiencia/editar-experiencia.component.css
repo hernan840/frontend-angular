@@ -10,15 +10,21 @@
 .btn:hover{
     background-color: #a47ed598;
  }
+ .modal-dialog{
+    height: 200rem;
+ }
 
 .contet-modal-experiencia{
-    margin-top: 50rem;
     background-color: rgba(27, 21, 32, 0.794);
     background: rgba(11, 11, 11, 0.6);  /* transparente blureado */
     backdrop-filter: blur(8px);
-    box-shadow: 10px 0 10px rgba(9, 9, 9, 50%);
     width: 160rem;
     font-size: 15px;
+
+    box-shadow: 4px 0px 10px rgba(104, 84, 208, 0.653);
+    border-radius: 3rem;
+    top:30rem;
+    margin: auto;
 }
 .modal-title-experiencia{
     color: #fff;
@@ -88,4 +94,9 @@
 }
 .mensaje-fin {
     font-size: 3.5rem;
+}
+
+/* ocutar input del id */
+.form-control-id{
+    display: none;
 }

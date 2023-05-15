@@ -1,14 +1,16 @@
  <!-- Modal editar experiencia-->
- <div class="modal fade" id="modalExperiencia" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div>
     <div class="modal-dialog">
         <div class="modal-content contet-modal-experiencia">
             <div class="modal-header">
                 <h1 class="modal-title-experiencia" id="exampleModalLabel">Editar Experiencia Laboral</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                <button type="button" class="btn-close btn-close-white" routerLink="/"
                     aria-label="Close"></button>
             </div>
-            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="forms" (ngSubmit)="onUpdate($event)">
                 <div class="modal-body">
+                    <!-- Campo: Id(oculto) -->
+                    <input type="text" id="experiencia" class="form-control-id" formControlName="id" [ngModel]="expe.id"> 
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
                         <div *ngIf="Compania?.errors && Compania?.touched">
@@ -20,7 +22,7 @@
                     </div>
                     <p>
                         <label for="input">Nombre del Lugar</label>
-                        <input type="text" id="input-nombre-experiencia" placeholder="Nombre" formControlName="company">
+                        <input type="text" id="input-nombre-experiencia" placeholder="Nombre" formControlName="company"  [ngModel]="expe.company">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -33,7 +35,7 @@
                     <p>
                         <label for="input">Puesto</label>
                         <input type="text" id="input-nombre-puesto-experiencia" placeholder="Puesto"
-                            formControlName="position">
+                            formControlName="position" [ngModel]="expe.position">
                     </p>
                     <div class="container text-center">
                         <div class="row">
@@ -68,19 +70,19 @@
                     <div class="fechas">
                         <p>
                             <label for="date">Fecha inicio</label>
-                            <input type="date" id="date-fecha-experiencia-inicio" formControlName="dstart">
+                            <input type="date" id="date-fecha-experiencia-inicio" formControlName="startDate" [ngModel]="expe.startDate">
                         </p>
 
                         <p class="fecha-fin">
                             <label for="date">Fecha fin</label>
-                            <input type="date" id="date-fecha-experiencia-fin" formControlName="dend">
+                            <input type="date" id="date-fecha-experiencia-fin" formControlName="endDate" [ngModel]="expe.endDate">
                         </p>
 
                     </div>
 
                     <p>
                         <label for="file">Subir logo</label>
-                        <input type="file" id="file-logo-experiencia">
+                        <input type="file" id="file-logo-experiencia" formControlName="img" [ngModel]="expe.img">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -93,13 +95,13 @@
                     <p>
                         <label for="textarea">Descripción</label>
                         <textarea id="textarea-descripcion-experiencia" rows="3" style="height: 110px;"
-                            formControlName="description"></textarea>
+                            formControlName="description" [ngModel]="expe.company"></textarea>
                     </p>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="button" class="btn btn-secondary" routerLink="/">Canselar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
 

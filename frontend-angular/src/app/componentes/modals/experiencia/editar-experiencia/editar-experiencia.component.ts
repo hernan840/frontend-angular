@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Experiencia } from 'src/app/modelos/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 @Component({
   selector: 'app-editar-experiencia',
@@ -9,19 +12,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EditarExperienciaComponent implements OnInit {
   /* se crea una variable forms */
   forms: FormGroup;
+  expe :Experiencia = new Experiencia('','','','','','');
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private experienciaService:ExperienciaService,
+              private activatedRoute:ActivatedRoute,
+              private router:Router) {
     ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
     this.forms = this.formBuilder.group({
+      id:[''],
       company: ['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
       position: ['', Validators.required],
       description: ['', Validators.required],
-      dstart: ['', [Validators.required, Validators.maxLength(10)]],
-      dend: ['', [Validators.required, Validators.maxLength(10)]]
+      img: [''],
+      startDate: ['', [Validators.required, Validators.maxLength(10)]],
+      endDate: ['', [Validators.required, Validators.maxLength(10)]]
     })
   }
-
-  ngOnInit() { }
 
   get Compania() {
     return this.forms.get("company");
@@ -34,28 +41,40 @@ export class EditarExperienciaComponent implements OnInit {
     return this.forms.get("description");
   }
   get FechaInicio() {
-    return this.forms.get("dstart");
+    return this.forms.get("startDate");
+  }
+  get Imagen() {
+    return this.forms.get("img");
   }
   get FchaFin() {
-    return this.forms.get("dend");
+    return this.forms.get("endDate");
   }
 
 
 
-  onEnviar(event: Event) {
-    console.log(this.forms) //para ver por consola
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
-    event.preventDefault;
-
-
-
-    if (this.forms.valid) {
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Formulario Enviado!")
-
+  ngOnInit(): void {
+    // inicie con los datos cargados en el formulario
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.experienciaService.detail(id).subscribe(data => {
+      this.expe=data;
     }
-
-
+    )
   }
-}
+  
+  onUpdate(event:Event): void{
+    event.preventDefault;
+    
+    console.log(this.forms.value);
+    this.experienciaService.update(this.forms.value).subscribe(data=>{
+      alert("Experiencia modificada!!!!");
+      this.router.navigate(['']);
+    }, err => {
+      this.forms.markAllAsTouched();
+      alert("Falló la modificación de la experiencia!");
+  
+    })
+  }
+  
+  
+  }
+  
