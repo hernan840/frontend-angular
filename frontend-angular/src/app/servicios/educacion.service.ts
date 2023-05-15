@@ -8,7 +8,7 @@ import { Educacion } from '../modelos/educacion';
 })
 export class EducacionService {
 
-  url="http://localhost:8080//api/educaciones";
+  url="http://localhost:8080/api/educaciones";
 
   constructor(private http:HttpClient) { }
 

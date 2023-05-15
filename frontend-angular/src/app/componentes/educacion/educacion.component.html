@@ -10,10 +10,10 @@
 
         </div>
         <div class="box-container-educacion" >
-            <div class="box" *ngFor="let educacion of educacionLista">
+            <div class="box" *ngFor="let educacion of educaciones">
                 <i class="fas fa-graduation-cap"></i>
                 <img [src]="educacion.img" alt="">
-                <span>{{educacion.end}}</span>
+                <span>{{educacion.startDate| date: "yyyy"}} - {{educacion.endDate| date: "yyyy"}}</span>
                 <h3>{{educacion.school}}</h3>
                 <h2>Titulo :{{educacion.title}}</h2>
                 <p>{{educacion.description}}</p>
