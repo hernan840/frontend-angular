@@ -1,15 +1,16 @@
 <!-- Modal sobre mi-->
-<div class="modal fade" id="modalSobreMi" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div>
     <div class="modal-dialog">
         <div class="modal-content contet-modal-sobremi">
             <div class="modal-header">
                 <h1 class="modal-title-sobremi" id="exampleModalLabel">Información Sobre Mi</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                <button type="button" class="btn-close btn-close-white" routerLink="/"
                     aria-label="Close"></button>
             </div>
-            <form [formGroup]="forms" (ngSubmit)="onEnviar($event)">
+            <form [formGroup]="forms" (ngSubmit)="onUpdate($event)">
                 <div class="modal-body">
+                     <!-- Campo: Id(oculto) -->
+                     <input type="text" id="proyecto" class="form-control-id" formControlName="id" [ngModel]="perso.id"> 
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
                         <div *ngIf="Name?.errors && Name?.touched">
@@ -21,7 +22,7 @@
                     </div>
                     <p>
                         <label for="input">Ingrese Nombre</label>
-                        <input type="text" id="input-nombre" placeholder="Nombre y Apellido" formControlName="name">
+                        <input type="text" id="input-nombre" placeholder="Nombre y Apellido" formControlName="name" [ngModel]="perso.name">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -34,7 +35,7 @@
                     </div>
                     <p>
                         <label for="file">Subir Imagen de Perfil </label>
-                        <input type="file" id="file-perfil" formControlName="imgPerfilSibreMi">
+                        <input type="file" id="file-perfil" formControlName="imgPerfilSibreMi" [ngModel]="perso.imgPerfilSibreMi">
                     </p>
                     <!-- Gracias al getter que configuramos en el controlador -->
                     <div class="mensaje">
@@ -47,13 +48,13 @@
                     </div>
                     <p>
                         <label for="textarea">Descripción</label>
-                        <textarea id="textarea-descripcion" rows="3" style="height: 110px;" formControlName="about"></textarea>
+                        <textarea id="textarea-descripcion" rows="3" style="height: 110px;" formControlName="about" [ngModel]="perso.about"></textarea>
                     </p>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canselar</button>
+                    <button type="button" class="btn btn-secondary" routerLink="/">Canselar</button>
                     <button type="submit" [disabled]="forms.invalid" class="btn btn-primary">Guardar</button>
                 </div>
             </form>

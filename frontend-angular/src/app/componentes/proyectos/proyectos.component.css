@@ -21,6 +21,8 @@
     overflow: auto;                /*ocultar barra scrol*/
     scrollbar-width: none;
     
+        z-index: 100;
+
     
  }
  .proyectos .contenido-proyectos::-webkit-scrollbar{

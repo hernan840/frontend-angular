@@ -1,23 +1,29 @@
 <!-- inicio seccion sobre mi -->
 <section id="sobre_mi" class="sobre_mi">
     <div class="contenido-sobremi">
-        <div class="contenedor-img">
-            <img [src]="miPorfolio.imgPerfilSibreMi" alt="">
-        </div>
-        <div class="contenedor-btn-edit-borrar-sobremi">
-            <button type="button" class="btn btn-primary btn-editar-sobremi" data-bs-toggle="modal"
-                data-bs-target="#modalSobreMi">
-                <i class="fa-solid fa-pencil"></i>
-            </button>
-            <button type="button" class="btn btn-primary btn-borrar-sobremi" data-bs-toggle="modal">
-                <i class="fa-solid fa-trash"></i>
-            </button>
+        <div class="card" *ngFor="let persona of personas">
+
+            <div class="contenedor-img">
+                <img [src]="persona.imgPerfilSibreMi" alt="">
+            </div>
+            <div class="contenedor-btn-edit-borrar-sobremi">
+                <button type="button" class="btn btn-primary btn-editar-sobremi" data-bs-toggle="modal"
+                    routerLink="editPersona/{{persona.id}}">
+                    <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button type="button" class="btn btn-primary btn-borrar-sobremi" data-bs-toggle="modal">
+                    <i class="fa-solid fa-trash" (click)="borrar(persona.id)"></i>
+                </button>
+            </div>
+    
+            <div class="descripcion">
+                <h1>{{persona.name}}</h1>
+                <p>{{persona.about}}</p>
+            </div>
+
         </div>
 
-        <div class="descripcion">
-            <h1>{{miPorfolio.name}}</h1>
-            <p>{{miPorfolio.about}}</p>
-        </div>
+
       
 
     </div>
@@ -25,4 +31,4 @@
 <!-- fin seccion sobre mi -->
 
 <!-- agregar el selector del los modales aqui -->
-<app-editar-sobremi></app-editar-sobremi>
+<!-- <app-editar-sobremi></app-editar-sobremi> -->

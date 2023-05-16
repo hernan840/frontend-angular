@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
@@ -8,18 +9,35 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./sobre-mi.component.css']
 })
 export class SobreMiComponent implements OnInit{
-  miPorfolio: any;
 
+  //Variable para usarla(enlazarla) al template(en el html de la vista)
+  personas: any[]=[];
   // inyectamos el servicio en el contructor
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private personaService : PersonaService) { }
 
-  // para acceder al servicio lo hace a traves de ngOnInit
+  
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      // console.log(data);
-      this.miPorfolio= data;
-    });
-
+    this.cargarProyectos();
+   
   }
+
+  cargarProyectos():void{
+    this.personaService.lista().subscribe(data =>{
+      this.personas = data;
+    });
+  }
+
+  borrar(id:number){
+    if (id != undefined){
+      this.personaService.delete(id).subscribe(
+        data =>{
+          //alert("Halidad eliminada!!!");
+          this.cargarProyectos();
+        }, err =>{
+          //alert("No se pudo eliminar la habilidad!")
+          window.location.reload();
+        })
+    }}
+
 
 }
