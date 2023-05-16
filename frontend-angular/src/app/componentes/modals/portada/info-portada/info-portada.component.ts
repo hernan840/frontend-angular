@@ -13,12 +13,30 @@ export class InfoPortadaComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) {
     ///Creamos el grupo de controles para el formulario de login, en group tenemos los campos del formulario
     this.forms = this.formBuilder.group({
+      name:['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
+      position: ['',[Validators.required, Validators.maxLength(25)]],
+      imgPerfilMenu: ['',Validators.required],
+
       imgPerfilPortada: ['', Validators.required], 
-      backPortada: ['', Validators.required]
+      backPortada: ['', Validators.required],
+
+      imgPerfilSibreMi: ['', Validators.required], /// como trabajamos con varias validaciondes por cada campo se coloca en un array
+      about: ['', Validators.required]
     })
   }
 
   ngOnInit() { }
+
+  get Name(){
+    return this.forms.get("name");
+  }
+ 
+  get Position(){
+   return this.forms.get("position");
+  }
+  get ImagenPerfil(){
+    return this.forms.get("imgPerfilMenu");
+   }
 
   get ImgPerfilPortada() {
     return this.forms.get("imgPerfilPortada");
@@ -27,6 +45,14 @@ export class InfoPortadaComponent implements OnInit {
   get FondoPortada() {
     return this.forms.get("backPortada");
   }
+ get ImgSobremi() {
+    return this.forms.get("imgPerfilSibreMi");
+  }
+
+  get Sobremi() {
+    return this.forms.get("about");
+  }
+
  
 
   onEnviar(event: Event) {

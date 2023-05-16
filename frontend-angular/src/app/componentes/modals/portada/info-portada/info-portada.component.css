@@ -56,6 +56,46 @@
      border-radius: 8px;
  }
 
+/* ------------ */
+#file-foto-usuario-head{
+    background-color: rgba(130, 130, 138, 0.642);
+    margin-left: 9rem;
+    margin-top: 3rem;
+}
+#input-nombre-usuario-head{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 15rem;
+    width: 102rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+#input-head-titulo{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 40rem;
+    margin-top: 3rem;
+    width: 102rem;
+    border-radius: 8px;
+}
+/* -------------- */
+
+#file-perfil{
+    background-color: rgba(130, 130, 138, 0.642);
+    margin-left: 8rem;
+    margin-top: 3rem;
+}
+
+#textarea-descripcion{
+    background-color: rgba(207, 207, 222, 0.947);
+    margin-left: 30rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    width: 102rem;
+}
+/* ------------------ */
+
+
+
  .contenedor-btn-edit-borrar-red{
     width: 42px;
     height: 42px;
